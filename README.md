@@ -40,11 +40,9 @@ Whether you're exploring the latest projects, learning about data science, or ju
 
 ##  Contact
 
-For collaboration, inquiries, or feedback, reach out anytime:
+For business inquiries, feedback, or collaborations, feel free to reach out:
 
 [✉️ Contact Me](mailto:contact@sujandas.info) | [🌐 Visit Website](https://www.sujandas.info)
-
-
 ---
 
 ## 🛡 License
