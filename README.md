@@ -10,7 +10,7 @@
 
 ---
 
-## ✨ About This Website
+##  About This Website
 
 This website is a clean, modern, and responsive platform showcasing a blend of web development projects and data science expertise. Designed to highlight skills, creative coding experiments, and professional insights, it adapts seamlessly to any device.
 
@@ -18,18 +18,18 @@ Whether you're exploring the latest projects, learning about data science, or ju
 
 ---
 
-## 🔥 Key Features
+##  Key Features
 
-- ✅ **Modern Design** — Minimal, clean layouts with smooth navigation  
-- 📱 **Responsive** — Optimized for mobile, tablet, and desktop  
-- 🎨 **Interactive Elements** — Subtle animations and dynamic content  
-- ⚡ **Fast Loading** — Lightweight and performance-focused  
-- 🌙 **Light/Dark Mode** *(optional)* — Theme adapts to user preference  
-- 📚 **Project Highlights** — Showcasing coding and data science work  
+-  **Modern Design** — Minimal, clean layouts with smooth navigation  
+-  **Responsive** — Optimized for mobile, tablet, and desktop  
+-  **Interactive Elements** — Subtle animations and dynamic content  
+-  **Fast Loading** — Lightweight and performance-focused  
+-  **Light/Dark Mode** *(optional)* — Theme adapts to user preference  
+-  **Project Highlights** — Showcasing coding and data science work  
 
 ---
 
-## 🛠 Built With
+##  Built With
 
 - **Frontend:** React.js + Tailwind CSS  
 - **Animations:** Framer Motion / GSAP (where applicable)  
@@ -38,18 +38,21 @@ Whether you're exploring the latest projects, learning about data science, or ju
 
 ---
 
-## 📬 Contact
+##  Contact
 
 For collaboration, inquiries, or feedback, reach out anytime:
 
-- ✉️ Email: [contact@sujandas.info](mailto:contact@sujandas.info)  
-- 🌐 Website: [www.sujandas.info](https://www.sujandas.info)  
+[✉️ Contact Me](mailto:contact@sujandas.info) | [🌐 Visit Website](https://www.sujandas.info)
+
 
 ---
 
-## 📄 License
+## 🛡 License
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
+This project is licensed under the **Apache License 2.0** — permissive, with extra legal safety (patent protection).
+
 
 ---
 
