@@ -78,4 +78,3 @@ This project is licensed under the **Apache License 2.0** — permissive, with e
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" height="35" alt="LinkedIn" />
   </a>
 </p>
-
