@@ -55,7 +55,7 @@ This project is licensed under the **Apache License 2.0** — permissive, with e
 ---
 
 <h3 align="center" style="font-weight: normal; font-style: italic; margin-top: 2rem;">
-  🚀 Made with passion, code, and a little too much coffee ☕ by  
+  🚀 Made with passion, code, and a little too much tea ☕ by  
   <a href="https://www.sujandas.info" target="_blank" rel="noopener noreferrer" style="font-weight: bold; text-decoration: none; color: inherit;">
     Sujan Das
   </a>
