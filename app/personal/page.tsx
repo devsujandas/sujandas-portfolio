@@ -563,70 +563,7 @@ const PersonalPage = () => {
             
 
             {/* Quantum Portal CTA */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 1.5, type: "spring" }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <motion.div className="relative inline-block" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                {/* Portal Rings */}
-                {[...Array(3)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className={`absolute inset-0 border-2 rounded-full ${
-                      i === 0 ? "border-red-500/50" : i === 1 ? "border-blue-500/50" : "border-green-500/50"
-                    }`}
-                    style={{
-                      width: `${120 + i * 20}px`,
-                      height: `${120 + i * 20}px`,
-                      left: `${-10 - i * 10}px`,
-                      top: `${-10 - i * 10}px`,
-                    }}
-                    animate={{
-                      rotate: i % 2 === 0 ? 360 : -360,
-                      scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                      rotate: { duration: 4 + i, repeat: Number.POSITIVE_INFINITY, ease: "linear" },
-                      scale: { duration: 2, repeat: Number.POSITIVE_INFINITY, delay: i * 0.3 },
-                    }}
-                  />
-                ))}
-
-                {/* Main Portal */}
-                <motion.div
-                  className="relative bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 rounded-full p-8 border-4 border-white/30 backdrop-blur-sm"
-                  animate={{
-                    boxShadow: [
-                      "0 0 20px rgba(239,68,68,0.5)",
-                      "0 0 40px rgba(139,92,246,0.5)",
-                      "0 0 60px rgba(59,130,246,0.5)",
-                      "0 0 40px rgba(139,92,246,0.5)",
-                      "0 0 20px rgba(239,68,68,0.5)",
-                    ],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Number.POSITIVE_INFINITY,
-                  }}
-                >
-                  <motion.div
-                    className="text-white font-bold text-xl"
-                    animate={{
-                      color: ["#ffffff", "#ff6b6b", "#4ecdc4", "#45b7d1", "#ffffff"],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Number.POSITIVE_INFINITY,
-                    }}
-                  >
-                    INITIALIZE JOURNEY
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-            </motion.div>
+            
           </motion.div>
         </div>
       </section>
