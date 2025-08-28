@@ -10,11 +10,11 @@ const navItems = [
   { icon: Home, href: "/", label: "Home" },
   { icon: User, href: "/about", label: "About" },
   { icon: Code, href: "#skills", label: "Skills" },
-  { icon: Briefcase, href: "#services", label: "Services" },
+  { icon: Briefcase, href: "/services", label: "Services" },
   { icon: FolderOpen, href: "/project", label: "Projects" },
   { icon: BookOpen, href: "/blog", label: "Blog" },
   { icon: Award, href: "/certificate", label: "Certificate" },
-  { icon: Mail, href: "/contact", label: "Contact" }, // now a dedicated page
+  { icon: Mail, href: "/contact", label: "Contact" },
 ]
 
 export default function Navbar() {

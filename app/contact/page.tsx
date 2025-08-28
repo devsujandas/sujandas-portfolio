@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function ContactPage() {
-  // Same prefilled email as on Home/About.
+  // Updated mailto constant
   const mailto =
-    "mailto:contact@sujandas.info?subject=Collaboration%20with%20Sujan&body=Hi%20Sujan%2C%0D%0A%0D%0AI%27d%20love%20to%20discuss%20a%20project.%20Here%20are%20some%20details%3A%0D%0A-%20Scope%3A%20%0D%0A-%20Timeline%3A%20%0D%0A-%20Budget%3A%20%0D%0A%0D%0ABest%2C%0D%0A"
+    "mailto:contact@sujandas.info?subject=Project%20Collaboration%20Request&body=Hi%20Sujan,%0D%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20really%20impressed%20with%20your%20work.%20I%27d%20love%20to%20discuss%20a%20potential%20project%20collaboration.%0D%0ALooking%20forward%20to%20hearing%20from%20you.%0D%0ABest%20regards,%0D%0A%5BYour%20Name%5D"
 
   const quickFacts = [
     { icon: MapPin, title: "Location", text: "Kolkata, India" },
@@ -111,23 +111,8 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Direct email + alt channels */}
-            <div className="mt-6 responsive-grid responsive-grid-md-3 gap-6">
-              <Card className="contact-card">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Mail className="w-5 h-5 text-red-400" />
-                    <h3 className="font-semibold">Email</h3>
-                  </div>
-                  <p className="text-gray-300 text-sm mb-4">
-                    The fastest way to reach me. Share your scope, timeline, and any references.
-                  </p>
-                  <Button asChild className="cta-button">
-                    <Link href={mailto}>Email Sujan</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-
+            {/* Direct channels */}
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="contact-card">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-2">

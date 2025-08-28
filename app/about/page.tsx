@@ -16,24 +16,20 @@ import {
   Cpu,
   BarChart3,
   Database,
+  GaugeCircle,
+  Rocket,
+  BrainCircuit,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function AboutPage() {
-  // Keep the same color and theme; leverage existing utility classes from your globals.
   const infoItems = [
     { icon: Sparkles, label: "Name", value: "Sujan Das" },
     { icon: Mail, label: "Email", value: "contact@sujandas.info", href: "mailto:contact@sujandas.info" },
     { icon: Globe, label: "Based in", value: "Kolkata, India" },
     { icon: Briefcase, label: "Experience", value: "2+ Years" },
     { icon: GraduationCap, label: "Education", value: "BCA Graduate" },
-  ]
-
-  const stats = [
-    { value: "20+", label: "Projects Delivered" },
-    { value: "8+", label: "Core Tools" },
-    { value: "100%", label: "Quality-First" },
   ]
 
   const timeline = [
@@ -54,7 +50,7 @@ export default function AboutPage() {
     },
   ]
 
-  // Rich "What I Do" content (more detailed and attractive)
+  // Reworked "What I Do": detailed and attractive, includes Data Science & Analytics
   const services = [
     {
       icon: Code,
@@ -98,7 +94,7 @@ export default function AboutPage() {
     },
   ]
 
-  // Improved Tech Stack: grouped by category with tags
+  // Improved Tech Stack groups (removed the 'Workflow' group per request)
   const techGroups: { group: string; tools: string[] }[] = [
     {
       group: "Core",
@@ -116,15 +112,30 @@ export default function AboutPage() {
       group: "Data & ML",
       tools: ["Pandas", "NumPy", "scikit-learn", "TensorFlow", "Matplotlib"],
     },
+  ]
+
+  // Replace numeric stats with attractive/interesting highlights
+  const highlights = [
     {
-      group: "Workflow",
-      tools: ["CI/CD", "Testing", "Prettier/ESLint", "Vercel", "Docker (basics)"],
+      icon: GaugeCircle,
+      title: "Lighthouse 95+",
+      subtitle: "Performance • Accessibility • Best Practices",
+    },
+    {
+      icon: BrainCircuit,
+      title: "Data-First",
+      subtitle: "Decisions guided by metrics and experiments",
+    },
+    {
+      icon: Rocket,
+      title: "Fast Iteration",
+      subtitle: "Ship small, learn fast, improve continuously",
     },
   ]
 
-  // Same mailto format as on the Home page: prefilled subject and body.
-  const mailto =
-    "mailto:contact@sujandas.info?subject=Collaboration%20with%20Sujan&body=Hi%20Sujan%2C%0D%0A%0D%0AI%27d%20love%20to%20discuss%20a%20project.%20Here%20are%20some%20details%3A%0D%0A-%20Scope%3A%20%0D%0A-%20Timeline%3A%20%0D%0A-%20Budget%3A%20%0D%0A%0D%0ABest%2C%0D%0A"
+  // Bottom CTA: exact prewritten Subject and Body you requested
+  const collabMailto =
+    "mailto:contact@sujandas.info?subject=Project%20Collaboration%20Request&body=Hi%20Sujan%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20really%20impressed%20with%20your%20work.%20I%27d%20love%20to%20discuss%20a%20potential%20project%20collaboration.%0A%0ALooking%20forward%20to%20hearing%20from%20you.%0A%0ABest%20regards%2C%0A%5BYour%20Name%5D"
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
@@ -175,12 +186,18 @@ export default function AboutPage() {
                     />
                   </div>
 
-                  {/* Stats */}
-                  <div className="mt-6 grid grid-cols-3 gap-3">
-                    {stats.map((s) => (
-                      <div key={s.label} className="text-center">
-                        <div className="text-responsive-2xl font-extrabold">{s.value}</div>
-                        <div className="text-gray-400 text-xs sm:text-sm">{s.label}</div>
+                  {/* Highlights (replacing numeric stats) */}
+                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    {highlights.map((h) => (
+                      <div
+                        key={h.title}
+                        className="rounded-xl border border-red-500/20 bg-white/5 p-3 text-center hover:bg-red-500/10 transition-colors"
+                      >
+                        <div className="flex items-center justify-center gap-2 mb-1">
+                          <h.icon className="w-4 h-4 text-red-400" />
+                          <div className="text-[0.95rem] font-semibold">{h.title}</div>
+                        </div>
+                        <div className="text-xs text-gray-400">{h.subtitle}</div>
                       </div>
                     ))}
                   </div>
@@ -234,10 +251,10 @@ export default function AboutPage() {
                   ))}
                 </div>
 
-                {/* CTAs */}
+                {/* CTAs (Change: remove "Contact Page" button; make "Get in touch" go to /contact) */}
                 <div className="flex flex-wrap gap-3">
                   <Button asChild className="cta-button">
-                    <Link href={mailto} aria-label="Send email to Sujan with a prefilled collaboration message">
+                    <Link href="/contact" aria-label="Open contact page">
                       <Mail className="w-4 h-4 mr-2" />
                       Get in touch
                     </Link>
@@ -252,16 +269,11 @@ export default function AboutPage() {
                       View Projects
                     </Link>
                   </Button>
-                  <Button variant="ghost" className="text-red-300 hover:text-red-200 hover:bg-red-500/10" asChild>
-                    <Link href="/contact" aria-label="Open contact page">
-                      Contact Page
-                    </Link>
-                  </Button>
                 </div>
               </motion.div>
             </div>
 
-            {/* What I Do - richer, with bullet points */}
+            {/* What I Do */}
             <div className="mt-12 sm:mt-16">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -334,7 +346,7 @@ export default function AboutPage() {
                       <div className="h-1 w-20 rounded bg-red-500/30" />
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {group.tools.map((tool, i) => (
+                      {group.tools.map((tool) => (
                         <span
                           key={tool}
                           className="skill-badge hover:border-red-500/40 hover:bg-red-500/10 transition-colors"
@@ -382,40 +394,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Principles */}
-            <div className="mt-12 sm:mt-16">
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-responsive-3xl font-bold mb-6"
-              >
-                Working <span className="red-accent">Principles</span>
-              </motion.h2>
-
-              <div className="grid gap-3">
-                {[
-                  "Quality over quick hacks — stable foundations win.",
-                  "User-first — clarity, responsiveness, and accessibility matter.",
-                  "Measure and iterate — ship, learn, improve.",
-                  "Automate repeatable tasks — safer and faster delivery.",
-                ].map((p, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: i * 0.05 }}
-                    className="flex items-start gap-3"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-300">{p}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
             {/* Contact CTA */}
             <div className="mt-12 sm:mt-16 text-center">
               <motion.div
@@ -430,7 +408,7 @@ export default function AboutPage() {
                 </p>
                 <div className="flex items-center justify-center gap-3 flex-wrap">
                   <Button asChild className="cta-button">
-                    <Link href={mailto} aria-label="Email Sujan to get in touch">
+                    <Link href={collabMailto} aria-label="Email Sujan to get in touch with a prewritten message">
                       <Mail className="w-4 h-4 mr-2" />
                       Get in touch
                     </Link>
