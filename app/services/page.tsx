@@ -422,7 +422,7 @@ export default function ServicesPage() {
                   className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-white/5 px-3 py-2 text-white hover:bg-white/10 transition"
                 >
                   <ExternalLink className="h-4 w-4 text-red-300" />
-                  <span className="text-sm">Live Preview</span>
+                  <span className="text-sm">Preview</span>
                 </a>
               </div>
             </div>
@@ -459,7 +459,7 @@ export default function ServicesPage() {
                   className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-white/5 px-3 py-2 text-white hover:bg-white/10 transition"
                 >
                   <ExternalLink className="h-4 w-4 text-red-300" />
-                  <span className="text-sm">Live Preview</span>
+                  <span className="text-sm">Preview</span>
                 </a>
               </div>
             </div>
