@@ -8,13 +8,13 @@ import { Home, User, Code, Briefcase, FolderOpen, BookOpen, Mail, Award } from "
 
 const navItems = [
   { icon: Home, href: "/", label: "Home" },
-  { icon: User, href: "#about", label: "About" },
+  { icon: User, href: "/about", label: "About" },
   { icon: Code, href: "#skills", label: "Skills" },
   { icon: Briefcase, href: "#services", label: "Services" },
   { icon: FolderOpen, href: "/project", label: "Projects" },
   { icon: BookOpen, href: "/blog", label: "Blog" },
   { icon: Award, href: "/certificate", label: "Certificate" },
-  { icon: Mail, href: "#contact", label: "Contact" },
+  { icon: Mail, href: "/contact", label: "Contact" }, // now a dedicated page
 ]
 
 export default function Navbar() {
@@ -36,8 +36,8 @@ export default function Navbar() {
         for (const section of sections) {
           const element = document.querySelector(section)
           if (element) {
-            const offsetTop = element.offsetTop
-            const offsetHeight = element.offsetHeight
+            const offsetTop = element instanceof HTMLElement ? element.offsetTop : 0
+            const offsetHeight = element instanceof HTMLElement ? element.offsetHeight : 0
 
             if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
               setActiveSection(section)
@@ -103,13 +103,14 @@ export default function Navbar() {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="fixed bottom-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-t border-red-500/20 safe-area-pb"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      aria-label="Primary"
     >
       <div className="w-full px-2 sm:px-4">
         <div className="flex items-center justify-center py-2 sm:py-3">
           <div className="flex items-center justify-between max-w-md bg-black/40 backdrop-blur-md rounded-full border-red-500/20 py-0.5 px-0 mx-2 w-full border">
             {navItems.map((item, index) => (
               <motion.div
-                key={index}
+                key={`${item.label}-${index}`}
                 whileHover={{ scale: 1.05, y: -1 }}
                 whileTap={{ scale: 0.95 }}
                 className="relative flex-1"
@@ -118,8 +119,10 @@ export default function Navbar() {
                   <button
                     onClick={() => handleNavClick(item.href)}
                     className={`nav-item-mobile ${isActive(item.href) ? "active" : ""}`}
+                    aria-current={isActive(item.href) ? "page" : undefined}
+                    aria-label={item.label}
                   >
-                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
                     <span className="text-xs mt-1 hidden sm:block">{item.label}</span>
                     {isActive(item.href) && (
                       <motion.div
@@ -130,8 +133,13 @@ export default function Navbar() {
                     )}
                   </button>
                 ) : (
-                  <Link href={item.href} className={`nav-item-mobile ${isActive(item.href) ? "active" : ""}`}>
-                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <Link
+                    href={item.href}
+                    className={`nav-item-mobile ${isActive(item.href) ? "active" : ""}`}
+                    aria-current={isActive(item.href) ? "page" : undefined}
+                    aria-label={item.label}
+                  >
+                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
                     <span className="text-xs mt-1 hidden sm:block">{item.label}</span>
                     {isActive(item.href) && (
                       <motion.div
