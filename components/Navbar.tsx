@@ -4,12 +4,11 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { motion } from "framer-motion"
-import { Home, User, Code, Briefcase, FolderOpen, BookOpen, Mail, Award } from "lucide-react"
+import { Home, User, Briefcase, FolderOpen, BookOpen, Mail, Award } from "lucide-react"
 
 const navItems = [
   { icon: Home, href: "/", label: "Home" },
   { icon: User, href: "/about", label: "About" },
-  { icon: Code, href: "#skills", label: "Skills" },
   { icon: Briefcase, href: "/services", label: "Services" },
   { icon: FolderOpen, href: "/project", label: "Projects" },
   { icon: BookOpen, href: "/blog", label: "Blog" },
@@ -29,7 +28,7 @@ export default function Navbar() {
     setMounted(true)
 
     const handleScroll = () => {
-      const sections = ["#about", "#skills", "#services", "#contact"]
+      const sections = ["#about", "#services", "#contact"]
       const scrollPosition = window.scrollY + 100
 
       if (pathname === "/") {

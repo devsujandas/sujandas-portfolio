@@ -18,6 +18,7 @@ import {
   Wand2,
   Github,
   ExternalLink,
+  ArrowLeft,
 } from "lucide-react"
 
 function TabletFrame({
@@ -118,6 +119,18 @@ function Reveal({
 export default function ServicesPage() {
   return (
     <main className="min-h-screen">
+      {/* Back to Home link */}
+      <nav className="container mx-auto px-4 pt-4">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 transition-colors font-medium"
+          aria-label="Back to Home"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          <span>Back to Home</span>
+        </Link>
+      </nav>
+
       {/* hero */}
       <section className="container mx-auto px-4 pt-16 md:pt-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
@@ -149,37 +162,31 @@ export default function ServicesPage() {
             </Reveal>
 
             <Reveal delay={300}>
-              <div
-                className="mt-6 flex flex-nowrap gap-3 overflow-x-auto whitespace-nowrap -mx-4 px-4 md:mx-0 md:px-0"
-                role="region"
-                aria-label="Hero quick actions"
-              >
-                <a
-                  href="https://github.com/devsujandas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 inline-flex items-center gap-2 rounded-lg border border-white/10 bg-black/40 px-4 py-2.5 text-white hover:bg-black/50 transition"
-                  aria-label="Visit my GitHub profile"
+              <div className="mt-6 -mx-4 px-4 md:mx-0 md:px-0">
+                <div
+                  className="flex flex-nowrap items-center gap-3 overflow-x-auto whitespace-nowrap touch-pan-x snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                  role="region"
+                  aria-label="Hero quick actions"
                 >
-                  <Github className="h-4 w-4" />
-                  <span>GitHub</span>
-                </a>
+                  <a
+                    href="https://github.com/devsujandas"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 snap-start inline-flex items-center gap-2 rounded-lg border border-white/10 bg-black/40 px-4 py-2.5 text-white hover:bg-black/50 transition"
+                    aria-label="Visit my GitHub profile"
+                  >
+                    <Github className="h-4 w-4" />
+                    <span>GitHub</span>
+                  </a>
 
-                <a
-                  href="/project"
-                  className="shrink-0 inline-flex items-center gap-2 rounded-lg border border-red-500/30 bg-white/5 px-4 py-2.5 text-white hover:bg-white/10 transition"
-                >
-                  <Rocket className="h-4 w-4 text-red-400" />
-                  <span>View Projects</span>
-                </a>
-
-                <a
-                  href="/contact"
-                  className="shrink-0 inline-flex items-center gap-2 rounded-lg border border-white/10 bg-black/40 px-4 py-2.5 text-white hover:bg-black/50 transition"
-                >
-                  <ShieldCheck className="h-4 w-4 text-slate-300" />
-                  <span>Contact Page</span>
-                </a>
+                  <a
+                    href="/contact"
+                    className="shrink-0 snap-start inline-flex items-center gap-2 rounded-lg border border-white/10 bg-black/40 px-4 py-2.5 text-white hover:bg-black/50 transition"
+                  >
+                    <ShieldCheck className="h-4 w-4 text-slate-300" />
+                    <span>Contact Page</span>
+                  </a>
+                </div>
               </div>
             </Reveal>
           </div>

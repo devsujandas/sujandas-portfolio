@@ -19,6 +19,7 @@ import {
   GaugeCircle,
   Rocket,
   BrainCircuit,
+  ArrowLeft,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -139,6 +140,18 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
+      {/* Back to Home link */}
+      <nav className="container mx-auto px-4 pt-4">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 transition-colors font-medium"
+          aria-label="Back to Home"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          <span>Back to Home</span>
+        </Link>
+      </nav>
+
       {/* Top intro */}
       <section className="pt-24 sm:pt-28 pb-10 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -256,7 +269,7 @@ export default function AboutPage() {
                   <Button asChild className="cta-button">
                     <Link href="/contact" aria-label="Open contact page">
                       <Mail className="w-4 h-4 mr-2" />
-                      Get in touch
+                      Say Hi
                     </Link>
                   </Button>
                   <Button
@@ -411,15 +424,6 @@ export default function AboutPage() {
                     <Link href={collabMailto} aria-label="Email Sujan to get in touch with a prewritten message">
                       <Mail className="w-4 h-4 mr-2" />
                       Get in touch
-                    </Link>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-red-500/30 text-red-300 hover:text-red-200 hover:bg-red-500/10 bg-transparent"
-                    asChild
-                  >
-                    <Link href="/contact" aria-label="Go to contact page">
-                      Contact Page
                     </Link>
                   </Button>
                 </div>

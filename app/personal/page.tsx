@@ -3,20 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { useEffect } from "react"
-import {
-  ArrowLeft,
-  Heart,
-  Book,
-  Film,
-  Coffee,
-  Music,
-  Code,
-  Gamepad2,
-  Bike,
-  Shield,
-  Star,
-  Lightbulb,
-} from "lucide-react"
+import { ArrowLeft, Heart, Tv, Film, Coffee, Music, Code, Gamepad2, Bike, Shield, Star, Lightbulb } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -112,58 +99,58 @@ const PersonalPage = () => {
     },
   ]
 
-  const favoriteBooks = [
+  const favoriteSeries = [
     {
-      title: "Clean Code",
-      author: "Robert C. Martin",
-      reason: "Changed how I write and think about code",
-      category: "Tech",
+      title: "Breaking Bad",
+      seasons: "5 seasons",
+      reason: "Masterclass in character arcs and tension",
+      genre: "Crime / Drama",
     },
     {
-      title: "The Pragmatic Programmer",
-      author: "David Thomas & Andrew Hunt",
-      reason: "Best practices that actually make sense",
-      category: "Tech",
+      title: "Stranger Things",
+      seasons: "4+ seasons",
+      reason: "80s nostalgia meets supernatural mystery",
+      genre: "Sci‑Fi / Horror",
     },
     {
-      title: "Atomic Habits",
-      author: "James Clear",
-      reason: "Helped me build better coding and life habits",
-      category: "Self-Help",
+      title: "Sherlock",
+      seasons: "4 seasons",
+      reason: "Clever writing and brilliant deductions",
+      genre: "Mystery / Crime",
     },
     {
-      title: "The Hitchhiker's Guide to the Galaxy",
-      author: "Douglas Adams",
-      reason: "Perfect blend of humor and sci-fi",
-      category: "Fiction",
+      title: "Dark",
+      seasons: "3 seasons",
+      reason: "Mind-bending time travel puzzle",
+      genre: "Sci‑Fi / Thriller",
     },
   ]
 
   const favoriteMovies = [
-{
-  title: "Avengers: Endgame",
-  year: "2019",
-  reason: "Heroes unite for ultimate battle.",
-  genre: "Superhero / Action"
-},
-{
-  title: "Transformers: The Last Knight",
-  year: "2017",
-  reason: "Robots clash across Earth's history.",
-  genre: "Science Fiction / Action"
-},
-{
-  title: "3 Idiots",
-  year: "2009",
-  reason: "Challenging norms with humor, heart.",
-  genre: "Comedy / Drama"
-},
-{
-  title: "Kalki 2898 AD",
-  year: "2024",
-  reason: "Futuristic mythological epic unfolds.",
-  genre: "Science Fiction / Mythology"
-}
+    {
+      title: "Avengers: Endgame",
+      year: "2019",
+      reason: "Heroes unite for ultimate battle.",
+      genre: "Superhero / Action",
+    },
+    {
+      title: "Transformers: The Last Knight",
+      year: "2017",
+      reason: "Robots clash across Earth's history.",
+      genre: "Science Fiction / Action",
+    },
+    {
+      title: "3 Idiots",
+      year: "2009",
+      reason: "Challenging norms with humor, heart.",
+      genre: "Comedy / Drama",
+    },
+    {
+      title: "Kalki 2898 AD",
+      year: "2024",
+      reason: "Futuristic mythological epic unfolds.",
+      genre: "Science Fiction / Mythology",
+    },
   ]
 
   const funStats = [
@@ -287,283 +274,6 @@ const PersonalPage = () => {
                 </Card>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Extraordinary Interactive Welcome Section */}
-      <section className="py-20 px-4 sm:px-6 relative overflow-hidden min-h-screen flex items-center">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 relative z-10">
-          {/* Matrix Digital Rain Background */}
-          <div className="absolute inset-0 pointer-events-none opacity-20">
-            {[...Array(50)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute text-green-400 font-mono text-xs"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `-10%`,
-                }}
-                animate={{
-                  y: ["0vh", "110vh"],
-                  opacity: [0, 1, 1, 0],
-                }}
-                transition={{
-                  duration: 3 + Math.random() * 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  delay: Math.random() * 5,
-                  ease: "linear",
-                }}
-              >
-                {Array.from({ length: 20 }, () => String.fromCharCode(0x30a0 + Math.random() * 96)).join("")}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Floating Code Blocks */}
-          <div className="absolute inset-0 pointer-events-none">
-            {[
-              "const life = () => { return 'amazing'; }",
-              "while(coding) { happiness++; }",
-              "if(tea.isEmpty()) { refill(); }",
-              "function debug() { console.log('🐛'); }",
-              "let dreams = ['code', 'create', 'inspire'];",
-            ].map((code, i) => (
-              <motion.div
-                key={i}
-                className="absolute bg-black/60 border border-red-500/30 rounded-lg px-3 py-2 text-xs font-mono text-green-400 backdrop-blur-sm"
-                style={{
-                  left: `${10 + i * 18}%`,
-                  top: `${20 + (i % 3) * 30}%`,
-                }}
-                animate={{
-                  y: [-20, 20, -20],
-                  x: [-10, 10, -10],
-                  rotate: [-2, 2, -2],
-                  scale: [0.8, 1, 0.8],
-                }}
-                transition={{
-                  duration: 4 + Math.random() * 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  delay: i * 0.8,
-                }}
-                whileHover={{ scale: 1.2, zIndex: 50 }}
-              >
-                {code}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Particle Network System */}
-          <div className="absolute inset-0 pointer-events-none">
-            {[...Array(12)].map((_, i) => (
-              <motion.div key={i}>
-                <motion.div
-                  className="absolute w-2 h-2 bg-red-500 rounded-full"
-                  style={{
-                    left: `${15 + i * 7}%`,
-                    top: `${25 + (i % 4) * 20}%`,
-                  }}
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.3, 1, 0.3],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Number.POSITIVE_INFINITY,
-                    delay: i * 0.2,
-                  }}
-                />
-                {/* Connection Lines */}
-                {i < 11 && (
-                  <motion.div
-                    className="absolute h-px bg-gradient-to-r from-red-500/50 to-transparent origin-left"
-                    style={{
-                      left: `${15 + i * 7}%`,
-                      top: `${25 + (i % 4) * 20}%`,
-                      width: "7%",
-                      transform: `rotate(${Math.random() * 60 - 30}deg)`,
-                    }}
-                    animate={{
-                      scaleX: [0, 1, 0],
-                      opacity: [0, 0.8, 0],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Number.POSITIVE_INFINITY,
-                      delay: i * 0.3,
-                    }}
-                  />
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true }}
-            className="relative z-20"
-          >
-            {/* Holographic Title */}
-            <div className="text-center mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 100, rotateX: -90 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{ duration: 1.2, type: "spring" }}
-                viewport={{ once: true }}
-                className="relative inline-block perspective-1000"
-              >
-                <motion.h2
-                  className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 relative"
-                  style={{
-                    background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57)",
-                    backgroundSize: "400% 400%",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                  animate={{
-                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                    textShadow: [
-                      "0 0 20px rgba(255,107,107,0.5)",
-                      "0 0 40px rgba(78,205,196,0.5)",
-                      "0 0 20px rgba(255,107,107,0.5)",
-                    ],
-                  }}
-                  transition={{
-                    backgroundPosition: { duration: 3, repeat: Number.POSITIVE_INFINITY },
-                    textShadow: { duration: 2, repeat: Number.POSITIVE_INFINITY },
-                  }}
-                >
-                  ENTER THE
-                  <br />
-                  <motion.span
-                    animate={{
-                      rotateY: [0, 360],
-                      scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                      rotateY: { duration: 4, repeat: Number.POSITIVE_INFINITY },
-                      scale: { duration: 2, repeat: Number.POSITIVE_INFINITY },
-                    }}
-                    className="inline-block"
-                  >
-                    MATRIX
-                  </motion.span>
-                </motion.h2>
-
-                {/* Holographic Scan Lines */}
-                <motion.div
-                  className="absolute inset-0 pointer-events-none"
-                  animate={{
-                    background: [
-                      "linear-gradient(90deg, transparent 0%, rgba(78,205,196,0.1) 50%, transparent 100%)",
-                      "linear-gradient(90deg, transparent 100%, rgba(78,205,196,0.1) 50%, transparent 0%)",
-                    ],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Number.POSITIVE_INFINITY,
-                  }}
-                />
-
-                {/* Data Corruption Glitch */}
-                <motion.div
-                  className="absolute inset-0 mix-blend-multiply"
-                  animate={{
-                    clipPath: [
-                      "polygon(0 0, 100% 0, 100% 45%, 0 45%)",
-                      "polygon(0 55%, 100% 55%, 100% 100%, 0 100%)",
-                      "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                    ],
-                    backgroundColor: ["rgba(255,0,0,0)", "rgba(255,0,0,0.1)", "rgba(255,0,0,0)"],
-                  }}
-                  transition={{
-                    duration: 0.1,
-                    repeat: Number.POSITIVE_INFINITY,
-                    repeatDelay: 3,
-                  }}
-                />
-              </motion.div>
-
-              {/* Interactive Terminal */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-black/80 border border-green-500/50 rounded-lg p-6 font-mono text-left max-w-2xl mx-auto mb-12 backdrop-blur-sm"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-gray-400 text-sm ml-2">sujan@portfolio:~$</span>
-                </div>
-
-                <div className="space-y-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 2, delay: 1 }}
-                    viewport={{ once: true }}
-                    className="overflow-hidden"
-                  >
-                    <span className="text-green-400">$ whoami</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 3 }}
-                    viewport={{ once: true }}
-                    className="text-white"
-                  >
-                    Developer, Dreamer, Tea Enthusiast
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 2, delay: 4 }}
-                    viewport={{ once: true }}
-                    className="overflow-hidden"
-                  >
-                    <span className="text-green-400">$ cat personality.json</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 6 }}
-                    viewport={{ once: true }}
-                    className="text-cyan-400"
-                  >
-                    {`{
-  "status": "caffeinated",
-  "mood": "debugging",
-  "superpower": "turning_bugs_into_features"
-}`}
-                  </motion.div>
-
-                  <motion.div
-                    animate={{ opacity: [1, 0, 1] }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
-                    className="text-green-400"
-                  >
-                    <span>$ █</span>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Funny Personal Traits Orbs */}
-            
-
-            {/* Quantum Portal CTA */}
-            
           </motion.div>
         </div>
       </section>
@@ -786,7 +496,7 @@ const PersonalPage = () => {
       <section className="py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Favorite Books */}
+            {/* Favorite Series */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -794,15 +504,15 @@ const PersonalPage = () => {
               viewport={{ once: true }}
             >
               <div className="text-center mb-8">
-                <Book className="w-8 h-8 text-red-400 mx-auto mb-4" />
+                <Tv className="w-8 h-8 text-red-400 mx-auto mb-4" />
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
-                  Favorite <span className="red-accent">Books</span>
+                  Favorite <span className="red-accent">Series</span>
                 </h3>
-                <p className="text-gray-400 text-sm sm:text-lg">Books that didn't put me to sleep 📖</p>
+                <p className="text-gray-400 text-sm sm:text-lg">Series that kept me bingeing 📺</p>
               </div>
 
               <div className="space-y-4">
-                {favoriteBooks.map((book, index) => (
+                {favoriteSeries.map((series, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -814,13 +524,13 @@ const PersonalPage = () => {
                     <Card className="bg-black/40 border-red-500/20 hover:border-red-500/40 transition-all duration-300">
                       <CardContent className="p-4 sm:p-6">
                         <div className="flex justify-between items-start mb-2">
-                          <h4 className="font-semibold text-white">{book.title}</h4>
+                          <h4 className="font-semibold text-white">{series.title}</h4>
                           <span className="text-xs sm:text-sm bg-red-500/20 text-red-300 px-2 py-1 rounded">
-                            {book.category}
+                            {series.genre}
                           </span>
                         </div>
-                        <p className="text-sm sm:text-base lg:text-lg text-gray-400 mb-2">by {book.author}</p>
-                        <p className="text-xs sm:text-sm lg:text-base text-gray-300 italic">"{book.reason}"</p>
+                        <p className="text-sm sm:text-base lg:text-lg text-gray-400 mb-2">Seasons: {series.seasons}</p>
+                        <p className="text-xs sm:text-sm lg:text-base text-gray-300 italic">"{series.reason}"</p>
                       </CardContent>
                     </Card>
                   </motion.div>
