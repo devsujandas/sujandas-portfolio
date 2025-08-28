@@ -269,7 +269,7 @@ export default function AboutPage() {
                   <Button asChild className="cta-button">
                     <Link href="/contact" aria-label="Open contact page">
                       <Mail className="w-4 h-4 mr-2" />
-                      Say Hi
+                      Say Hello
                     </Link>
                   </Button>
                   <Button

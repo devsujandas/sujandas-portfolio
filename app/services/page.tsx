@@ -213,7 +213,7 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid responsive-grid responsive-grid-md-2 responsive-grid-lg-3 items-stretch">
           <Reveal delay={0}>
             {/* Web App Development */}
             <article className="glass-card p-5 sm:p-6 h-full flex flex-col min-h-[340px] hover:-translate-y-1 transition">
