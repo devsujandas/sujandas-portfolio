@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Linkedin, Twitter, Mail, MapPin, Facebook, Instagram, Code, Award, Target, Heart } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, MapPin, Facebook, Instagram, Code, Award, Target, Heart, HeartHandshake, HandshakeIcon, UserRoundIcon, SendIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -611,8 +611,8 @@ export default function Home() {
                   </p>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button className="cta-button text-responsive-lg px-6 sm:px-8 py-3" asChild>
-                      <Link href={mailtoLink}>
-                        <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                      <Link href="/contact">
+                      <HandshakeIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                         Get In Touch
                       </Link>
                     </Button>

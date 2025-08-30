@@ -19,6 +19,8 @@ import {
   Github,
   ExternalLink,
   ArrowLeft,
+  CompassIcon,
+  Layers2Icon,
 } from "lucide-react"
 
 function TabletFrame({
@@ -181,7 +183,7 @@ export default function ServicesPage() {
 
                   <a
                     href="/contact"
-                    className="shrink-0 snap-start inline-flex items-center gap-2 rounded-lg border border-white/10 bg-black/40 px-4 py-2.5 text-white hover:bg-black/50 transition"
+                    className="shrink-0 snap-start inline-flex items-center gap-2 rounded-lg border border-red-500/50 bg-red-600 px-4 py-2.5 text-white hover:bg-red-700 transition"
                   >
                     <ShieldCheck className="h-4 w-4 text-slate-300" />
                     <span>Contact Page</span>
@@ -568,12 +570,13 @@ export default function ServicesPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="mailto:contact@sujandas.info?subject=Project%20Collaboration%20Request&body=Hi%20Sujan,%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20really%20impressed%20with%20your%20work.%20I%27d%20love%20to%20discuss%20a%20potential%20project%20collaboration.%0ALooking%20forward%20to%20hearing%20from%20you.%0ABest%20regards,%0A[Your%20Name]"
+                  href="/project"
                   className="cta-button"
                 >
-                  <Wand2 className="h-4 w-4" />
-                  {"Get in touch"}
+                <Layers2Icon className="h-4 w-4" />
+                {"Explore Work"}
                 </a>
+
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-black/40 px-4 py-2.5 text-white hover:bg-black/50 transition"
