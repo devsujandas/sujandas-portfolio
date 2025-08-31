@@ -2089,7 +2089,7 @@ export default function BlogClientPage() {
                             <h3 className="text-white font-bold text-xl lg:text-2xl line-clamp-2 group-hover:text-red-300 transition-colors mb-3">
                               {post.title}
                             </h3>
-                            <p className="text-gray-200 text-sm line-clamp-2 mb-4 leading-relaxed">{post.excerpt}</p>
+                            
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-4 text-gray-300 text-sm">
                                 <div className="flex items-center gap-1">
