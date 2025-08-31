@@ -20,6 +20,12 @@ import {
   Rocket,
   BrainCircuit,
   ArrowLeft,
+  MessageCircleIcon,
+  WorkflowIcon,
+  Plug2Icon,
+  MergeIcon,
+  PuzzleIcon,
+  Layers3Icon,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -40,13 +46,13 @@ export default function AboutPage() {
       description: "Designing data pipelines, building & evaluating models, and shipping AI features into usable apps.",
     },
     {
-      period: "2023",
+      period: "2022 — 2025",
       title: "BCA Graduation",
       description: "Completed BCA focused on Python, DSA, and modern full-stack practices with Next.js.",
     },
     {
-      period: "2022 — 2023",
-      title: "Frontend Developer (Projects)",
+      period: "2021 — 2023",
+      title: "Frontend Developer",
       description: "Built responsive and accessible interfaces with smooth animations and excellent performance.",
     },
   ]
@@ -268,7 +274,7 @@ export default function AboutPage() {
                 <div className="flex flex-wrap gap-3">
                   <Button asChild className="cta-button">
                     <Link href="/contact" aria-label="Open contact page">
-                      <Mail className="w-4 h-4 mr-2" />
+                      <MessageCircleIcon className="w-4 h-4 mr-2" />
                       Say Hello
                     </Link>
                   </Button>
@@ -421,9 +427,9 @@ export default function AboutPage() {
                 </p>
                 <div className="flex items-center justify-center gap-3 flex-wrap">
                   <Button asChild className="cta-button">
-                    <Link href={collabMailto} aria-label="Email Sujan to get in touch with a prewritten message">
-                      <Mail className="w-4 h-4 mr-2" />
-                      Get in touch
+                    <Link href="/contact" aria-label="Open contact page">
+                      <WorkflowIcon className="w-4 h-4 mr-2" />
+                      Let’s Collaborate
                     </Link>
                   </Button>
                 </div>

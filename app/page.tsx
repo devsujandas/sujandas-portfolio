@@ -74,6 +74,15 @@ const faqData = [
 export default function Home() {
   const [showLoading, setShowLoading] = useState(true)
   const [showMeme, setShowMeme] = useState(false)
+  const [copied, setCopied] = useState(false);
+  const email = "contact@sujandas.info";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -534,95 +543,130 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-16 sm:py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="section-border p-6 sm:p-8">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12 sm:mb-16"
-            >
-              <h2 className="text-responsive-4xl font-bold mb-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <div className="w-12 sm:w-16 h-0.5 bg-red-500"></div>
-                <span>
-                  Let's <span className="red-accent">Connect</span>
-                </span>
-                <div className="w-12 sm:w-16 h-0.5 bg-red-500"></div>
-              </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-responsive-lg">
-                I'm always excited to discuss new opportunities, collaborate on interesting projects, or simply have a
-                conversation about technology and innovation.
-              </p>
-            </motion.div>
+{/* Contact Section */}
+<section id="contact" className="py-16 sm:py-20 px-4">
+  <div className="container mx-auto max-w-6xl">
+    <div className="section-border p-6 sm:p-8">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-center mb-12 sm:mb-16"
+      >
+        <h2 className="text-responsive-4xl font-bold mb-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="w-12 sm:w-16 h-0.5 bg-red-500"></div>
+          <span>
+            Let's <span className="red-accent">Connect</span>
+          </span>
+          <div className="w-12 sm:w-16 h-0.5 bg-red-500"></div>
+        </h2>
+        <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-responsive-lg">
+          I'm always excited to discuss new opportunities, collaborate on interesting projects, or simply have a
+          conversation about technology and innovation.
+        </p>
+      </motion.div>
+      <div className="responsive-grid responsive-grid-md-2 gap-6 sm:gap-8">
+        {/* Left Card - Contact Info */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="contact-card h-full space-y-6 sm:space-y-8">
+            {/* Email */}
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-responsive-xl font-semibold mb-3">Looking for my email?</h3>
+              </div>
+            </div>
 
-            <div className="responsive-grid responsive-grid-md-2 gap-6 sm:gap-8">
-              {/* Left Card - Contact Info */}
+            {/* Email Copy Card - Centered */}
+            <div className="flex justify-center">
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-4 cursor-pointer hover:bg-gray-800/70 transition-all duration-300 hover:border-red-500/30 max-w-sm w-full"
+                onClick={handleCopy}
               >
-                <div className="contact-card h-full space-y-6 sm:space-y-8">
-                  {/* Email */}
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
-                    </div>
-                    <div>
-                      <h3 className="text-responsive-xl font-semibold mb-1">Email Me</h3>
-                      <p className="text-gray-400 text-responsive-sm mb-2">Drop me a line anytime</p>
-                      <p className="text-gray-200 text-responsive-lg">contact@sujandas.info</p>
+                <div className="flex items-center justify-center text-center">
+                  <div className="flex items-center gap-3">
+                    <p className="text-white font-medium text-lg">
+                      {copied ? "Clipboard Looted 😂" : "Tap to copy"}
+                    </p>
+                    <div className="ml-2">
+                      {copied ? (
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="w-6 h-6 bg-green-500/20 rounded-lg flex items-center justify-center"
+                        >
+                          <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </motion.div>
+                      ) : (
+                        <div className="w-6 h-6 bg-red-500/20 rounded-lg flex items-center justify-center">
+                          <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                      )}
                     </div>
                   </div>
-
-                  {/* Location */}
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
-                    </div>
-                    <div>
-                      <h3 className="text-responsive-xl font-semibold mb-1">Location</h3>
-                      <p className="text-gray-400 text-responsive-sm mb-2">Based in</p>
-                      <p className="text-gray-200 text-responsive-lg">Kolkata, India</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Right Card - CTA */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <div className="contact-card h-full flex flex-col items-center justify-center text-center p-6 sm:p-8">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                    <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" />
-                  </div>
-                  <h3 className="text-responsive-2xl font-bold mb-4">Ready to Start a Project?</h3>
-                  <p className="text-gray-300 leading-relaxed mb-6 sm:mb-8 max-w-md text-responsive-base">
-                    Whether you have a specific project in mind or just want to explore possibilities, I'd love to hear
-                    from you.
-                  </p>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button className="cta-button text-responsive-lg px-6 sm:px-8 py-3" asChild>
-                      <Link href="/contact">
-                      <HandshakeIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                        Get In Touch
-                      </Link>
-                    </Button>
-                  </motion.div>
                 </div>
               </motion.div>
             </div>
+            
+            {/* Location */}
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
+              </div>
+              <div>
+                <h3 className="text-responsive-xl font-semibold mb-1">Location</h3>
+                <p className="text-gray-400 text-responsive-sm mb-2">Based in</p>
+                <p className="text-gray-200 text-responsive-lg">Kolkata, India</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+        
+        {/* Right Card - CTA */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="contact-card h-full flex flex-col items-center justify-center text-center p-6 sm:p-8">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 sm:mb-6">
+              <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" />
+            </div>
+            <h3 className="text-responsive-2xl font-bold mb-4">Ready to Start a Project?</h3>
+            <p className="text-gray-300 leading-relaxed mb-6 sm:mb-8 max-w-md text-responsive-base">
+              Whether you have a specific project in mind or just want to explore possibilities, I'd love to hear
+              from you.
+            </p>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button className="cta-button text-responsive-lg px-6 sm:px-8 py-3" asChild>
+                <Link href="/contact">
+                  <HandshakeIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                  Get In Touch
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   )
 }

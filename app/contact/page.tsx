@@ -1,7 +1,7 @@
 "use client"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
-import { Mail, MapPin, Clock, Sparkles, ArrowRight, CheckCircle2, Phone, MessageSquareText, X, ArrowLeft } from "lucide-react"
+import { Mail, MapPin, Clock, Sparkles, ArrowRight, CheckCircle2, Phone, MessageSquareText, X, ArrowLeft, CogIcon, HammerIcon, ActivityIcon, WorkflowIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useState, FormEvent, useRef, useEffect } from "react"
@@ -63,8 +63,8 @@ export default function ContactPage() {
   ]
 
   const optionSymbols = {
-    "Casually Say Hi": "✦",
-    "Project Collaboration": "⚑",
+    "Let’s Connect": "✦",
+    "Build Together": "⚑",
     "Consultation": "⚙"
   }
 
@@ -117,11 +117,11 @@ export default function ContactPage() {
       let subject = ""
       let message = ""
       
-      if (activeForm === "Casually Say Hi") {
+      if (activeForm === "Let’s Connect") {
         subject = "Casual Hello from Portfolio Contact"
         message = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message || ""}`
-      } else if (activeForm === "Project Collaboration") {
-        subject = "Project Collaboration Request"
+      } else if (activeForm === "Build Together") {
+        subject = "Build Together Request"
         message = `Name: ${formData.name}\nEmail: ${formData.email}\nBudget: ${formData.budget || ""}\nDeadline: ${formData.deadline || ""}\n\nProject Details:\n${formData.projectDetails || ""}`
       } else if (activeForm === "Consultation") {
         subject = "Consultation Request"
@@ -199,8 +199,8 @@ export default function ContactPage() {
                 onClick={() => window.location.href = "/services"}
                 className="bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-red-500/25"
   >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-                What I Do
+              <WorkflowIcon className="w-4 h-4 mr-2" />
+                What I Offer
               </Button>
         </motion.div>
 
@@ -333,7 +333,7 @@ export default function ContactPage() {
                     </Button>
                   </div>
                   <div className="grid md:grid-cols-3 gap-4">
-                    {["Casually Say Hi", "Project Collaboration", "Consultation"].map((option, index) => (
+                    {["Let’s Connect", "Build Together", "Consultation"].map((option, index) => (
                       <motion.div
                         key={option}
                         initial={{ opacity: 0, y: 10 }}
@@ -408,7 +408,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    {activeForm === "Casually Say Hi" && (
+                    {activeForm === "Let’s Connect" && (
                       <div>
                         <label className="block text-sm font-medium mb-2">Message</label>
                         <textarea
@@ -422,7 +422,7 @@ export default function ContactPage() {
                       </div>
                     )}
 
-                    {activeForm === "Project Collaboration" && (
+                    {activeForm === "Build Together" && (
                       <>
                         <div className="grid md:grid-cols-2 gap-4">
                           <div>
