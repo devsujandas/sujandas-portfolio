@@ -25,8 +25,8 @@ import {
 } from "lucide-react"
 
 function TabletFrame({
-  src = "/images/projects/portfolio-website.png",
-  alt = "Service preview on tablet",
+  src = "/videos/services.mp4", // Changed default to video
+  alt = "Service preview video",
 }: {
   src?: string
   alt?: string
@@ -44,8 +44,17 @@ function TabletFrame({
         {/* screen/bezel */}
         <div className="rounded-[28px] bg-black overflow-hidden border border-white/10">
           <div className="relative aspect-[4/3] bg-black">
-            {/* content */}
-            <img src={src || "/placeholder.svg"} alt={alt} className="h-full w-full object-cover" loading="lazy" />
+            {/* content - REPLACED IMG WITH VIDEO */}
+            <video
+              src={src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+            >
+              Your browser does not support the video tag.
+            </video>
             {/* subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
           </div>
@@ -60,12 +69,17 @@ function TabletFrame({
             maskImage: "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0))",
           }}
         >
-          <img
-            src={src || "/placeholder.svg"}
-            alt={"Tablet reflection " + alt}
-            className="h-full w-full object-cover scale-y-[-1]"
-            loading="lazy"
-          />
+          {/* Keep video in reflection too */}
+          <video
+            src="/videos/services.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-cover"
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
