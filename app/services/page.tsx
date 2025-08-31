@@ -2,6 +2,7 @@
 
 import type React from "react"
 
+
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import {
@@ -22,10 +23,15 @@ import {
   CompassIcon,
   Layers2Icon,
   FolderOpenIcon,
+  Server, Database, 
+  Settings, 
+  Shield,
+  HardDriveIcon,
+  PaletteIcon,
 } from "lucide-react"
 
 function TabletFrame({
-  src = "/videos/services.mp4", // Changed default to video
+  src = "/videos/services.mp4", // video path
   alt = "Service preview video",
 }: {
   src?: string
@@ -44,7 +50,7 @@ function TabletFrame({
         {/* screen/bezel */}
         <div className="rounded-[28px] bg-black overflow-hidden border border-white/10">
           <div className="relative aspect-[4/3] bg-black">
-            {/* content - REPLACED IMG WITH VIDEO */}
+            {/* content -  VIDEO */}
             <video
               src={src}
               autoPlay
@@ -69,7 +75,7 @@ function TabletFrame({
             maskImage: "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0))",
           }}
         >
-          {/* Keep video in reflection too */}
+          {/* video in reflection  */}
           <video
             src="/videos/services.mp4"
             autoPlay
@@ -233,7 +239,8 @@ export default function ServicesPage() {
         <div className="grid responsive-grid responsive-grid-md-2 responsive-grid-lg-3 items-stretch">
           <Reveal delay={0}>
             {/* Web App Development */}
-            <article className="glass-card p-5 sm:p-6 h-full flex flex-col min-h-[340px] hover:-translate-y-1 transition">
+           <article className="glass-card p-5 sm:p-6 flex flex-col h-full rounded-2xl hover:-translate-y-1 transition duration-300">
+
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-red-500/15 border border-red-500/20">
                   <Code2 className="h-5 w-5 text-red-400" />
@@ -262,7 +269,8 @@ export default function ServicesPage() {
 
           <Reveal delay={100}>
             {/* Data Science & Analytics */}
-            <article className="glass-card p-5 sm:p-6 h-full flex flex-col min-h-[340px] hover:-translate-y-1 transition">
+           <article className="glass-card p-5 sm:p-6 flex flex-col h-full rounded-2xl hover:-translate-y-1 transition duration-300">
+
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-red-500/15 border border-red-500/20">
                   <BarChart3 className="h-5 w-5 text-red-400" />
@@ -292,7 +300,8 @@ export default function ServicesPage() {
 
           <Reveal delay={200}>
             {/* AI Tools & Automation */}
-            <article className="glass-card p-5 sm:p-6 h-full flex flex-col min-h-[340px] hover:-translate-y-1 transition">
+           <article className="glass-card p-5 sm:p-6 flex flex-col h-full rounded-2xl hover:-translate-y-1 transition duration-300">
+
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-red-500/15 border border-red-500/20">
                   <Bot className="h-5 w-5 text-red-400" />
@@ -320,7 +329,8 @@ export default function ServicesPage() {
 
           <Reveal delay={300}>
             {/* APIs & Integrations */}
-            <article className="glass-card p-5 sm:p-6 h-full flex flex-col min-h-[340px] hover:-translate-y-1 transition">
+           <article className="glass-card p-5 sm:p-6 flex flex-col h-full rounded-2xl hover:-translate-y-1 transition duration-300">
+
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-red-500/15 border border-red-500/20">
                   <PlugZap className="h-5 w-5 text-red-400" />
@@ -348,7 +358,8 @@ export default function ServicesPage() {
 
           <Reveal delay={400}>
             {/* DevOps & Cloud */}
-            <article className="glass-card p-5 sm:p-6 h-full flex flex-col min-h-[340px] hover:-translate-y-1 transition">
+           <article className="glass-card p-5 sm:p-6 flex flex-col h-full rounded-2xl hover:-translate-y-1 transition duration-300">
+
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-red-500/15 border border-red-500/20">
                   <Cloud className="h-5 w-5 text-red-400" />
@@ -377,7 +388,8 @@ export default function ServicesPage() {
 
           <Reveal delay={500}>
             {/* UI/UX & Prototyping */}
-            <article className="glass-card p-5 sm:p-6 h-full flex flex-col min-h-[340px] hover:-translate-y-1 transition">
+           <article className="glass-card p-5 sm:p-6 flex flex-col h-full rounded-2xl hover:-translate-y-1 transition duration-300">
+
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-red-500/15 border border-red-500/20">
                   <PenTool className="h-5 w-5 text-red-400" />
@@ -413,7 +425,8 @@ export default function ServicesPage() {
       {/* Tablet notch */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-1.5 bg-gray-700 rounded-b-lg"></div>
 
-      <div className="p-3 bg-gradient-to-b from-slate-900 to-slate-800 h-[420px] flex">
+      <div className="p-3 bg-gradient-to-b from-slate-900 to-slate-800 aspect-[4/3] flex">
+
         <article className="glass-card overflow-hidden group rounded-2xl w-full">
           <div className="relative h-full">
             <img
@@ -453,7 +466,8 @@ export default function ServicesPage() {
     <div className="relative bg-black rounded-3xl shadow-xl overflow-hidden border border-white/10">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-1.5 bg-gray-700 rounded-b-lg"></div>
 
-      <div className="p-3 bg-gradient-to-b from-slate-900 to-slate-800 h-[420px] flex">
+      <div className="p-3 bg-gradient-to-b from-slate-900 to-slate-800 aspect-[4/3] flex">
+
         <article className="glass-card overflow-hidden group rounded-2xl w-full">
           <div className="relative h-full">
             <img
@@ -542,41 +556,68 @@ export default function ServicesPage() {
         </ol>
       </section>
 
-      {/* tech and tools */}
-      <section className="container mx-auto px-4 mt-14 md:mt-20">
-        <div className="text-center mb-8">
-          <div className="section-divider" />
-          <h2 className="text-responsive-3xl font-semibold">Tech & Tools</h2>
-          <p className="mt-2 text-slate-300/90">
-            A pragmatic stack that balances speed today with flexibility tomorrow.
-          </p>
-        </div>
+// tech and tools
+<section className="container mx-auto px-4 mt-14 md:mt-20">
+  <div className="text-center mb-8">
+    <div className="section-divider" />
+    <h2 className="text-responsive-3xl font-semibold">Tech & Tools</h2>
+    <p className="mt-2 text-slate-300/90">
+      A pragmatic stack that balances speed today with flexibility tomorrow.
+    </p>
+  </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
-          {[
-            { group: "Frontend", items: ["Next.js", "React", "TypeScript", "Tailwind", "shadcn/ui"] },
-            { group: "Backend", items: ["Node.js", "FastAPI", "REST", "GraphQL", "Webhooks"] },
-            { group: "Data", items: ["Python", "Pandas", "SQL", "dbt", "Notebooks"] },
-            { group: "Cloud & DevOps", items: ["Vercel", "Docker", "CI/CD", "Observability", "Auth"] },
-            { group: "Storage", items: ["Postgres", "Supabase", "Neon", "Blob", "Redis"] },
-            { group: "Quality", items: ["Testing", "Linting", "A11y", "Perf Budgets", "Code Review"] },
-          ].map(({ group, items }, idx) => (
-            <Reveal key={group} delay={idx * 100}>
-              <div className="glass-card p-5 sm:p-6 h-full flex flex-col min-h-[220px] hover:-translate-y-1 transition">
-                <h3 className="font-semibold">{group}</h3>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {items.map((t) => (
-                    <span key={t} className="skill-badge" style={{ lineHeight: 1.4 }}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
+    {[
+      {
+        group: "Frontend",
+        items: ["Next.js", "React", "TypeScript", "Tailwind", "shadcn/ui"],
+        icon: PaletteIcon,
+      },
+      {
+        group: "Backend",
+        items: ["Node.js", "FastAPI", "REST", "GraphQL", "Webhooks"],
+        icon: Server,
+      },
+      {
+        group: "Data",
+        items: ["Python", "Pandas", "SQL", "dbt", "Notebooks"],
+        icon: Database,
+      },
+      {
+        group: "Cloud & DevOps",
+        items: ["Vercel", "Docker", "CI/CD", "Observability", "Auth"],
+        icon: Cloud,
+      },
+      {
+        group: "Storage",
+        items: ["Postgres", "Supabase", "Neon", "Blob", "Redis"],
+        icon: HardDriveIcon,
+      },
+      {
+        group: "Quality",
+        items: ["Testing", "Linting", "A11y", "Perf Budgets", "Code Review"],
+        icon: ShieldCheck,
+      },
+    ].map(({ group, items, icon: Icon }, idx) => (
+<Reveal key={group} delay={idx * 100}>
+  <div className="glass-card p-5 sm:p-6 h-full flex flex-col hover:-translate-y-1 transition">
+    <div className="flex items-center gap-2">
+      <Icon className="h-5 w-5 text-red-500" />
+      <h3 className="font-semibold">{group}</h3>
+    </div>
+    <div className="mt-3 flex flex-wrap gap-2">
+      {items.map((t) => (
+        <span key={t} className="skill-badge" style={{ lineHeight: 1.4 }}>
+          {t}
+        </span>
+      ))}
+    </div>
+  </div>
+</Reveal>
 
+    ))}
+  </div>
+</section>;
       {/* CTA */}
       <section className="container mx-auto px-4 mt-14 md:mt-20 pb-36">
         <Reveal delay={0}>
