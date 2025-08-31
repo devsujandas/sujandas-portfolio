@@ -21,6 +21,7 @@ import {
   ArrowLeft,
   CompassIcon,
   Layers2Icon,
+  FolderOpenIcon,
 } from "lucide-react"
 
 function TabletFrame({
@@ -390,96 +391,103 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* project showcase (no heading) */}
-      <section className="container mx-auto px-4 mt-10 md:mt-14">
-        <div className="grid gap-5 md:grid-cols-2">
-          {/* Project 1 */}
-          <article className="glass-card overflow-hidden group">
-            <div className="relative">
-              <img
-                src="/images/projects/portfolio-website.png"
-                alt="Portfolio Website preview"
-                className="w-full h-60 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              {/* top badges */}
-              <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                <span className="px-2 py-0.5 rounded-md text-xs bg-white/10 border border-white/20 text-slate-200/90">
-                  Next.js
-                </span>
-              </div>
-              {/* overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 flex items-end justify-between gap-3">
-                <div>
-                  <h3 className="font-semibold">Portfolio Website</h3>
-                  <p className="text-sm text-slate-300/90 line-clamp-2">
-                    Personal portfolio built with Next.js, animated UI, and optimized performance.
-                  </p>
-                </div>
-                <a
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open live preview of Portfolio Website in a new tab"
-                  className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-white/5 px-3 py-2 text-white hover:bg-white/10 transition"
-                >
-                  <ExternalLink className="h-4 w-4 text-red-300" />
-                  <span className="text-sm">Preview</span>
-                </a>
-              </div>
-            </div>
-          </article>
+{/* project showcase (no heading) */}
+<section className="container mx-auto px-4 mt-10 md:mt-14">
+  <div className="grid gap-6 md:grid-cols-2">
+    {/* Project 1 */}
+    <div className="relative bg-black rounded-3xl shadow-xl overflow-hidden border border-white/10">
+      {/* Tablet notch */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-1.5 bg-gray-700 rounded-b-lg"></div>
 
-          {/* Project 2 */}
-          <article className="glass-card overflow-hidden group">
-            <div className="relative">
-              <img
-                src="/images/projects/resume-ai-bot.png"
-                alt="Resume AI Bot preview"
-                className="w-full h-60 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              {/* top badges */}
-              <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                <span className="px-2 py-0.5 rounded-md text-xs bg-white/10 border border-white/20 text-slate-200/90">
-                  Automation
-                </span>
-              </div>
-              {/* overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 flex items-end justify-between gap-3">
-                <div>
-                  <h3 className="font-semibold">Resume AI Bot</h3>
-                  <p className="text-sm text-slate-300/90 line-clamp-2">
-                    An AI assistant that analyzes resumes and suggests improvements for better impact.
-                  </p>
-                </div>
-                <a
-                  href="/project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open live preview related to Resume AI Bot in a new tab"
-                  className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-white/5 px-3 py-2 text-white hover:bg-white/10 transition"
-                >
-                  <ExternalLink className="h-4 w-4 text-red-300" />
-                  <span className="text-sm">Preview</span>
-                </a>
-              </div>
+      <div className="p-3 bg-gradient-to-b from-slate-900 to-slate-800 h-[420px] flex">
+        <article className="glass-card overflow-hidden group rounded-2xl w-full">
+          <div className="relative h-full">
+            <img
+              src="/images/projects/portfolio-website.png" // image
+              alt="Portfolio Website preview"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            {/* top badges */}
+            <div className="absolute top-3 left-3 flex flex-wrap gap-2">
+              <span className="px-2 py-0.5 rounded-md text-xs bg-white/10 border border-white/20 text-slate-200/90">
+                Next.js
+              </span>
             </div>
-          </article>
-        </div>
-
-        <Reveal delay={200}>
-          <div className="mt-6 flex justify-center">
-            <a
-              href="/project"
-              className="inline-flex items-center gap-2 rounded-lg border border-red-500/30 bg-white/5 px-4 py-2.5 text-white hover:bg-white/10 transition"
-            >
-              <Rocket className="h-4 w-4 text-red-400" />
-              <span>View more</span>
-            </a>
+            {/* overlay */}
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 flex items-end justify-between gap-3">
+              <div>
+                <h3 className="font-semibold">Portfolio Website</h3>
+              </div>
+              <a
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open live preview of Portfolio Website in a new tab"
+                className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-white/5 px-3 py-2 text-white hover:bg-white/10 transition"
+              >
+                <ExternalLink className="h-4 w-4 text-red-300" />
+                <span className="text-sm">Preview</span>
+              </a>
+            </div>
           </div>
-        </Reveal>
-      </section>
+        </article>
+      </div>
+    </div>
+
+    {/* Project 2 */}
+    <div className="relative bg-black rounded-3xl shadow-xl overflow-hidden border border-white/10">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-1.5 bg-gray-700 rounded-b-lg"></div>
+
+      <div className="p-3 bg-gradient-to-b from-slate-900 to-slate-800 h-[420px] flex">
+        <article className="glass-card overflow-hidden group rounded-2xl w-full">
+          <div className="relative h-full">
+            <img
+              src="/images/projects/resume-ai-bot.png" // image
+              alt="Resume AI Bot preview"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            {/* top badges */}
+            <div className="absolute top-3 left-3 flex flex-wrap gap-2">
+              <span className="px-2 py-0.5 rounded-md text-xs bg-white/10 border border-white/20 text-slate-200/90">
+                Automation
+              </span>
+            </div>
+            {/* overlay */}
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 flex items-end justify-between gap-3">
+              <div>
+                <h3 className="font-semibold">Resume AI Bot</h3>
+              </div>
+              <a
+                href="/project"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open live preview related to Resume AI Bot in a new tab"
+                className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-white/5 px-3 py-2 text-white hover:bg-white/10 transition"
+              >
+                <ExternalLink className="h-4 w-4 text-red-300" />
+                <span className="text-sm">Preview</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <Reveal delay={200}>
+    <div className="mt-6 flex justify-center">
+      <a
+        href="/project"
+        className="inline-flex items-center gap-3 rounded-lg border border-red-500/30 bg-white/5 px-8 py-2.5 text-white hover:bg-white/10 transition"
+      >
+        <FolderOpenIcon className="h-4 w-4 text-red-400" />
+        <span>View more</span>
+      </a>
+    </div>
+  </Reveal>
+</section>
 
       {/* process */}
       <section className="container mx-auto px-4 mt-14 md:mt-20">
