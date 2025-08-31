@@ -556,7 +556,7 @@ export default function ServicesPage() {
         </ol>
       </section>
 
-// tech and tools
+
 <section className="container mx-auto px-4 mt-14 md:mt-20">
   <div className="text-center mb-8">
     <div className="section-divider" />
