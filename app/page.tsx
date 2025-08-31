@@ -3,13 +3,15 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Linkedin, Twitter, Mail, MapPin, Facebook, Instagram, Code, Award, Target, Heart, HeartHandshake, HandshakeIcon, UserRoundIcon, SendIcon } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, MapPin, Globe, Facebook, Instagram, Code, Award, Target, Heart, HeartHandshake, HandshakeIcon, UserRoundIcon, SendIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import AboutSection from "@/components/AboutSection"
 import LoadingScreen from "@/components/LoadingScreen"
 import { useState, useEffect } from "react"
+
+
 
 const skills = ["Data Science Engineer", "Python Expert", "AI/ML Enthusiast", "Frontend Developer", "UI/UX Designer"]
 
@@ -633,6 +635,14 @@ export default function Home() {
                 <p className="text-gray-200 text-responsive-lg">Kolkata, India</p>
               </div>
             </div>
+            <div className="flex items-center justify-center mt-8">
+                <p className="text-gray-300 text-responsive-sm italic leading-relaxed text-center typing-animation">
+                  "Design that connects, delights,<br />
+                  and sometimes makes you smile."
+                </p>
+            </div>
+
+
           </div>
         </motion.div>
         
