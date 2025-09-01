@@ -1,10 +1,30 @@
 "use client"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
-import { Mail, MapPin, Clock, Sparkles, ArrowRight, CheckCircle2, Phone, MessageSquareText, X, ArrowLeft, CogIcon, HammerIcon, ActivityIcon, WorkflowIcon } from "lucide-react"
+import { 
+  Mail, 
+  MapPin, 
+  Clock, 
+  Sparkles, 
+  ArrowRight, 
+  CheckCircle2, 
+  Phone, 
+  MessageSquareText, 
+  X, 
+  ArrowLeft, 
+  CogIcon, 
+  HammerIcon, 
+  ActivityIcon, 
+  WorkflowIcon,
+  Github,
+  Linkedin,
+  Instagram
+} from "lucide-react";
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { useState, FormEvent, useRef, useEffect } from "react"
+import { useState, FormEvent, useRef, useEffect  } from "react"
+
 
 interface FormData {
   name: string
@@ -14,6 +34,7 @@ interface FormData {
   projectDetails?: string
   deadline?: string
   question?: string
+  queryType: string; 
 }
 
 export default function ContactPage() {
@@ -26,7 +47,8 @@ export default function ContactPage() {
     budget: "",
     projectDetails: "",
     deadline: "",
-    question: ""
+    question: "",
+    queryType: ""
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null)
@@ -90,7 +112,8 @@ export default function ContactPage() {
       budget: "",
       projectDetails: "",
       deadline: "",
-      question: ""
+      question: "",
+      queryType: "" 
     })
   }
 
@@ -154,7 +177,8 @@ export default function ContactPage() {
           budget: "",
           projectDetails: "",
           deadline: "",
-          question: ""
+          question: "",
+          queryType: "" 
         })
       } else {
         console.error("Web3Forms submission failed:", result)
@@ -408,19 +432,54 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    {activeForm === "Let’s Connect" && (
-                      <div>
-                        <label className="block text-sm font-medium mb-2">Message</label>
-                        <textarea
-                          required
-                          rows={4}
-                          value={formData.message}
-                          onChange={(e) => handleInputChange('message', e.target.value)}
-                          className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#ef4444] transition-colors"
-                          placeholder="Say hello..."
-                        />
-                      </div>
-                    )}
+{activeForm === "Let’s Connect" && (
+  <div>
+    <label className="block text-sm font-medium mb-2">Message</label>
+    <textarea
+      required
+      rows={4}
+      value={formData.message}
+      onChange={(e) => handleInputChange("message", e.target.value)}
+      className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#ef4444] transition-colors"
+      placeholder="Say hello..."
+    />
+
+    {/* Social Links */}
+<div className="flex flex-wrap justify-center gap-6 mt-6">
+  {/* GitHub */}
+<a
+  href="https://github.com/yourusername"
+  target="_blank"
+  className="flex items-center gap-2 text-gray-300 hover:text-[#181717] transition-colors"
+>
+  <Github className="w-5 h-5" />
+  <span>GitHub</span>
+</a>
+
+
+  {/* LinkedIn */}
+  <a
+    href="https://linkedin.com/in/yourusername"
+    target="_blank"
+    className="flex items-center gap-2 text-gray-300 hover:text-[#0A66C2] transition-colors"
+  >
+    <Linkedin className="w-5 h-5" />
+    <span>LinkedIn</span>
+  </a>
+
+  {/* Instagram */}
+  <a
+    href="https://instagram.com/yourusername"
+    target="_blank"
+    className="flex items-center gap-2 text-gray-300 hover:text-pink-500 transition-colors"
+  >
+    <Instagram className="w-5 h-5" />
+    <span>Instagram</span>
+  </a>
+</div>
+
+</div>
+)}
 
                     {activeForm === "Build Together" && (
                       <>
@@ -469,36 +528,65 @@ export default function ContactPage() {
                     )}
 
                     {activeForm === "Consultation" && (
-                      <div>
-                        <label className="block text-sm font-medium mb-2">Question</label>
-                        <textarea
-                          required
-                          rows={4}
-                          value={formData.question}
-                          onChange={(e) => handleInputChange('question', e.target.value)}
-                          className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#ef4444] transition-colors"
-                          placeholder="What would you like to discuss?"
-                        />
-                      </div>
-                    )}
+  <>
+    <div>
+      <label className="block text-sm font-medium mb-2">Related Query</label>
+      <select
+        required
+        value={formData.queryType}
+        onChange={(e) => handleInputChange('queryType', e.target.value)}
+        className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg 
+                   focus:outline-none focus:border-[#ef4444] transition-colors"
+      >
+<option value="">Select query type</option>
+<option value="Modern Web Apps">Modern Web Apps</option>
+<option value="Data Science & Analytics">Data Science & Analytics</option>
+<option value="AI Tools & Automation">AI Tools & Automation</option>
+<option value="APIs & Integrations">APIs & Integrations</option>
+<option value="DevOps & Cloud">DevOps & Cloud</option>
+<option value="UI/UX & Prototyping">UI/UX & Prototyping</option>
+<option value="Custom Query">Custom Query</option>
+      </select>
+    </div>
 
-                    <div className="flex gap-4">
-                      <Button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-2 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-red-500/25 disabled:opacity-50"
-                      >
-                        {isSubmitting ? "Sending..." : "Send Message"}
-                      </Button>
-                      <Button
-                        type="button"
-                        onClick={() => setActiveForm(null)}
-                        variant="outline"
-                        className="border-gray-700 text-gray-300 hover:text-white hover:border-gray-600 px-6 py-2 rounded-lg"
-                      >
-                        Cancel
-                      </Button>
-                    </div>
+    <div>
+      <label className="block text-sm font-medium mb-2">Inquiry</label>
+      <textarea
+        required
+        rows={4}
+        value={formData.question}
+        onChange={(e) => handleInputChange('question', e.target.value)}
+        className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg 
+                   focus:outline-none focus:border-[#ef4444] transition-colors"
+        placeholder="What would you like to discuss?"
+      />
+    </div>
+  </>
+)}
+
+
+<div className="flex justify-center gap-4 mt-6">
+  <Button
+    type="submit"
+    disabled={isSubmitting}
+    className="bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-2 rounded-lg 
+               transition-all duration-200 hover:shadow-lg hover:shadow-red-500/25 
+               disabled:opacity-50"
+  >
+    {isSubmitting ? "Sending..." : "Send Message"}
+  </Button>
+  
+  <Button
+    type="button"
+    onClick={() => setActiveForm(null)}
+    variant="outline"
+    className="border-gray-700 text-gray-300 hover:text-white hover:border-gray-600 
+               px-6 py-2 rounded-lg"
+  >
+    Cancel
+  </Button>
+</div>
+
                   </form>
                 </CardContent>
               </Card>
