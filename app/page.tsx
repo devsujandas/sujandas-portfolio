@@ -304,7 +304,8 @@ export default function Home() {
             >
               <div className="relative floating-animation">
                 {/* Tablet Frame */}
-                <div className="relative max-w-sm sm:max-w-md lg:max-w-lg">
+                <div className="relative max-w-lg sm:max-w-xl lg:max-w-2xl transform scale-110">
+
                   {/* Device Frame */}
                   <div className="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-[2rem] sm:rounded-[2.5rem] p-3 sm:p-4 shadow-2xl border border-gray-700/50">
                     {/* Screen Bezel */}
@@ -332,8 +333,8 @@ export default function Home() {
                         <Image
                           src="https://www.minjunkim.ca/images/lofiboy.gif"
                           alt="Sujan Das - Developer Illustration"
-                          width={400}
-                          height={300}
+                          width={800}
+                          height={600}
                           className="w-full h-auto object-cover"
                           priority
                           unoptimized
