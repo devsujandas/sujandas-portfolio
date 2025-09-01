@@ -33,7 +33,7 @@ interface FormData {
   budget?: string
   projectDetails?: string
   deadline?: string
-  question?: string
+  Inquiry?: string
   queryType: string; 
 }
 
@@ -47,7 +47,7 @@ export default function ContactPage() {
     budget: "",
     projectDetails: "",
     deadline: "",
-    question: "",
+    Inquiry: "",
     queryType: ""
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -112,7 +112,7 @@ export default function ContactPage() {
       budget: "",
       projectDetails: "",
       deadline: "",
-      question: "",
+      Inquiry: "",
       queryType: "" 
     })
   }
@@ -148,7 +148,12 @@ export default function ContactPage() {
         message = `Name: ${formData.name}\nEmail: ${formData.email}\nBudget: ${formData.budget || ""}\nDeadline: ${formData.deadline || ""}\n\nProject Details:\n${formData.projectDetails || ""}`
       } else if (activeForm === "Consultation") {
         subject = "Consultation Request"
-        message = `Name: ${formData.name}\nEmail: ${formData.email}\n\nQuestion:\n${formData.question || ""}`
+        message = `Name: ${formData.name}
+Email: ${formData.email}
+Related Query: ${formData.queryType || ""}
+  
+Inquiry:
+${formData.Inquiry || ""}`
       }
       
       submitData.append("subject", subject)
@@ -177,7 +182,7 @@ export default function ContactPage() {
           budget: "",
           projectDetails: "",
           deadline: "",
-          question: "",
+          Inquiry: "",
           queryType: "" 
         })
       } else {
@@ -446,36 +451,40 @@ export default function ContactPage() {
 
     {/* Social Links */}
 <div className="flex flex-wrap justify-center gap-6 mt-6">
-  {/* GitHub */}
+
+{/* GitHub */}
 <a
-  href="https://github.com/yourusername"
+  href="https://github.com/devsujandas"
   target="_blank"
-  className="flex items-center gap-2 text-gray-300 hover:text-[#181717] transition-colors"
+  className="flex items-center gap-2 text-gray-300 hover:text-[#24292F] 
+             transition-colors transform hover:scale-105 duration-200"
 >
   <Github className="w-5 h-5" />
   <span>GitHub</span>
 </a>
 
+{/* LinkedIn */}
+<a
+  href="https://linkedin.com/in/devsujandas"
+  target="_blank"
+  className="flex items-center gap-2 text-gray-300 hover:text-[#0A66C2] 
+             transition-colors transform hover:scale-105 duration-200"
+>
+  <Linkedin className="w-5 h-5" />
+  <span>LinkedIn</span>
+</a>
 
-  {/* LinkedIn */}
-  <a
-    href="https://linkedin.com/in/yourusername"
-    target="_blank"
-    className="flex items-center gap-2 text-gray-300 hover:text-[#0A66C2] transition-colors"
-  >
-    <Linkedin className="w-5 h-5" />
-    <span>LinkedIn</span>
-  </a>
+{/* Instagram */}
+<a
+  href="https://instagram.com/devsujandas"
+  target="_blank"
+  className="flex items-center gap-2 text-gray-300 hover:text-pink-500 
+             transition-colors transform hover:scale-105 duration-200"
+>
+  <Instagram className="w-5 h-5" />
+  <span>Instagram</span>
+</a>
 
-  {/* Instagram */}
-  <a
-    href="https://instagram.com/yourusername"
-    target="_blank"
-    className="flex items-center gap-2 text-gray-300 hover:text-pink-500 transition-colors"
-  >
-    <Instagram className="w-5 h-5" />
-    <span>Instagram</span>
-  </a>
 </div>
 
 </div>
@@ -486,31 +495,35 @@ export default function ContactPage() {
                         <div className="grid md:grid-cols-2 gap-4">
                           <div>
                             <label className="block text-sm font-medium mb-2">Budget Range</label>
-                            <select
-                              required
-                              value={formData.budget}
-                              onChange={(e) => handleInputChange('budget', e.target.value)}
-                              className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#ef4444] transition-colors"
-                            >
-                              <option value="">Select budget range</option>
-                              {budgetOptions.map((budget) => (
-                                <option key={budget} value={budget}>{budget}</option>
-                              ))}
-                            </select>
+<select
+  required
+  value={formData.budget}
+  onChange={(e) => handleInputChange('budget', e.target.value)}
+  className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#ef4444] transition-colors"
+>
+  <option value="" disabled>
+    Select budget range
+  </option>
+  {budgetOptions.map((budget) => (
+    <option key={budget} value={budget}>{budget}</option>
+  ))}
+</select>
                           </div>
                           <div>
                             <label className="block text-sm font-medium mb-2">Preferred Deadline</label>
                             <select
-                              required
-                              value={formData.deadline}
-                              onChange={(e) => handleInputChange('deadline', e.target.value)}
-                              className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#ef4444] transition-colors"
-                            >
-                              <option value="">Select preferred deadline</option>
-                              {deadlineOptions.map((deadline) => (
-                                <option key={deadline} value={deadline}>{deadline}</option>
-                              ))}
-                            </select>
+  required
+  value={formData.deadline}
+  onChange={(e) => handleInputChange('deadline', e.target.value)}
+  className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#ef4444] transition-colors"
+>
+  <option value="" disabled>
+    Select preferred deadline
+  </option>
+  {deadlineOptions.map((deadline) => (
+    <option key={deadline} value={deadline}>{deadline}</option>
+  ))}
+</select>
                           </div>
                         </div>
                         <div>
@@ -538,7 +551,9 @@ export default function ContactPage() {
         className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg 
                    focus:outline-none focus:border-[#ef4444] transition-colors"
       >
-<option value="">Select query type</option>
+  <option value="" disabled>
+    Select query type
+  </option>
 <option value="Modern Web Apps">Modern Web Apps</option>
 <option value="Data Science & Analytics">Data Science & Analytics</option>
 <option value="AI Tools & Automation">AI Tools & Automation</option>
@@ -546,7 +561,7 @@ export default function ContactPage() {
 <option value="DevOps & Cloud">DevOps & Cloud</option>
 <option value="UI/UX & Prototyping">UI/UX & Prototyping</option>
 <option value="Custom Query">Custom Query</option>
-      </select>
+    </select>
     </div>
 
     <div>
@@ -554,8 +569,8 @@ export default function ContactPage() {
       <textarea
         required
         rows={4}
-        value={formData.question}
-        onChange={(e) => handleInputChange('question', e.target.value)}
+        value={formData.Inquiry}
+        onChange={(e) => handleInputChange('Inquiry', e.target.value)}
         className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg 
                    focus:outline-none focus:border-[#ef4444] transition-colors"
         placeholder="What would you like to discuss?"
