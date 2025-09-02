@@ -9,6 +9,23 @@ import { Github, ExternalLink, Calendar, Star, GitFork, FolderOpen } from "lucid
 import { useState } from "react"
 
 const projects = [
+
+{
+  title: "Moneytany",
+  slug: "moneytany",
+  date: "2025-09-03",
+  tags: ["Data Analysis","Next.js", "Tailwind CSS", "PWA", "Finance Tracker"],
+  description:
+    "Moneytany is a PWA-ready finance tracker for managing expenses, income, and spending insights.",
+  image: "/images/projects/moneytany.png",
+  github: "https://github.com/devsujandas/moneytany",
+  live: "https://moneytany.sujandas.info/",
+  stars: "0",
+  forks: "0",
+  status: "Active",
+  featured: true,
+},
+
 {
   "title": "Restaurant Website",
   "slug": "restaurant-site",
@@ -42,7 +59,7 @@ const projects = [
   "title": "TuryaSahityangon",
   "slug": "bangla-literature-site",
   "date": "2025-09-02",
-  "tags": ["Next.js", "Tailwind", "TypeScript", "Framer Motion"],
+  "tags": ["Next.js", "Tailwind", "TypeScript", "Framer Motion","PostgreSQL","Database"],
   "description": "A digital Bangla literature platform with stories, poems, novels, category filters, and an engaging reading experience.",
   "image": "/images/projects/bangla-literature.png",
   "github": "https://github.com/devsujandas/Turyasahityangon",
@@ -57,7 +74,7 @@ const projects = [
   title: "GlowDock",
   slug: "glowdock",
   date: "2025-01-20",
-  tags: ["Next.js", "Tailwind CSS", "File Management", "Dashboard"],
+  tags: ["Next.js", "Tailwind CSS", "File Management", "Dashboard","PostgreSQL",  "Database"],
   description:
     "GlowDock is a secure file management platform for team sharing, analytics, collaboration, and real-time tracking.",
   image: "/images/projects/glowdock.png",
