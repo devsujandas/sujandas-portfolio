@@ -68,15 +68,15 @@ const certificates = [
 },
 
 {
-  "title": "Skill Development & Internship (Crop Yield Prediction)",
+  "title": "Skill Development & Internship ",
   "issuer": "Euphoria GenX",
   "date": "2024-05-24",
   "credentialId": "EG_24_1984",
   "category": "Machine Learning",
   "skills": ["Python", "Data Preprocessing", "Machine Learning", "Crop Yield Prediction", "Data Analysis"],
   "description": "Successfully completed the Skill Development and Internship programme at Euphoria GenX (31st March 2024 – 18th May 2024), contributing to the Crop Yield Prediction project.",
-  "image": "/images/certificates/euphoria-genx.jpg",
-  "verifyUrl": "/images/certificates/euphoria-genx.jpg",
+  "image": "/images/certificates/Euphoria-genx.jpg",
+  "verifyUrl": "/images/certificates/Euphoria-genx.jpg",
   "featured": false
 },
 {
