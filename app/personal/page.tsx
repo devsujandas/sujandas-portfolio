@@ -7,6 +7,8 @@ import { ArrowLeft, Heart, Tv, Film, Coffee, Music, Code, Gamepad2, Bike, Shield
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
+
+
 // Add mobile viewport fix
 const PersonalPage = () => {
   useEffect(() => {
@@ -101,31 +103,31 @@ const PersonalPage = () => {
 
   const favoriteSeries = [
     {
-      title: "Breaking Bad",
-      seasons: 5,
-      reason: "Masterclass in tension and character arcs",
-      genre: "Crime / Drama",
-    },
-    {
-      title: "Stranger Things",
-      seasons: 5,
-      reason: "Nostalgia, sci-fi, and a fantastic ensemble cast",
-      genre: "Sci-Fi / Horror",
-    },
-    {
-      title: "Dark",
-      seasons: 3,
-      reason: "Mind-bending time travel done right",
-      genre: "Sci-Fi / Mystery",
-    },
-    {
-      title: "Sherlock",
-      seasons: 4,
-      reason: "Clever, stylish, and endlessly rewatchable",
-      genre: "Crime / Mystery",
-    },
-  ]
+  title: "Squid Game",
+  seasons: 3,
+  reason: "Intense survival drama with social commentary",
+  genre: "Thriller / Drama",
+},
+{
+  title: "CID",
+  seasons: "All Seasons",
+  reason: "Legendary Indian crime series with countless episodes",
+  genre: "Crime / Mystery",
+},
+{
+  title: "Loki",
+  seasons: 1,
+  reason: "Time-bending Marvel series with a charismatic lead",
+  genre: "Sci-Fi / Fantasy",
+},
+{
+  title: "Panchayat",
+  seasons: 1,
+  reason: "Heartwarming rural comedy-drama with relatable characters",
+  genre: "Comedy / Drama",
+},
 
+  ]
   const favoriteMovies = [
     {
       title: "Avengers: Endgame",

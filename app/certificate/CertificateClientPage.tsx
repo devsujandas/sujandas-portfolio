@@ -8,84 +8,126 @@ import { Eye, Shield, Calendar, Award, ExternalLink } from "lucide-react"
 import { useState, useEffect } from "react"
 
 const certificates = [
-  {
-    title: "Python for Data Science and Machine Learning",
-    issuer: "Udemy",
-    date: "2024-12-15",
-    credentialId: "UC-a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    category: "Data Science",
-    skills: ["Python", "Data Science", "Machine Learning", "Pandas", "NumPy"],
-    description:
-      "Comprehensive course covering Python programming for data science, including machine learning algorithms, data visualization, and statistical analysis.",
-    image: "/images/certificates/python-data-science.png",
-    verifyUrl: "https://www.udemy.com/certificate/UC-a1b2c3d4-e5f6-7890-abcd-ef1234567890/",
-    featured: true,
-  },
-  {
-    title: "Advanced React and Next.js Development",
-    issuer: "Coursera",
-    date: "2024-11-20",
-    credentialId: "COURSERA-REACT-2024-001",
-    category: "Web Development",
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Web Development"],
-    description:
-      "Advanced concepts in React and Next.js development, including server-side rendering, API routes, and modern deployment strategies.",
-    image: "/images/certificates/react-nextjs.png",
-    verifyUrl: "https://coursera.org/verify/COURSERA-REACT-2024-001",
-    featured: true,
-  },
-  {
-    title: "AWS Cloud Practitioner",
-    issuer: "Amazon Web Services",
-    date: "2024-10-10",
-    credentialId: "AWS-CP-2024-SD001",
-    category: "Cloud",
-    skills: ["AWS", "Cloud Computing", "DevOps", "Infrastructure"],
-    description: "Foundational understanding of AWS cloud services, security, architecture, pricing, and support.",
-    image: "/images/certificates/aws-cloud.png",
-    verifyUrl: "https://aws.amazon.com/verification/AWS-CP-2024-SD001",
-    featured: false,
-  },
-  {
-    title: "TensorFlow Developer Certificate",
-    issuer: "TensorFlow",
-    date: "2024-09-05",
-    credentialId: "TF-DEV-2024-001",
-    category: "Machine Learning",
-    skills: ["TensorFlow", "Deep Learning", "Neural Networks", "AI"],
-    description: "Demonstrates proficiency in using TensorFlow to solve deep learning and machine learning problems.",
-    image: "/images/certificates/tensorflow-developer.png",
-    verifyUrl: "https://www.credential.net/TF-DEV-2024-001",
-    featured: true,
-  },
-  {
-    title: "Google Data Analytics Professional",
-    issuer: "Google",
-    date: "2024-08-15",
-    credentialId: "GOOGLE-DA-2024-001",
-    category: "Data Science",
-    skills: ["Data Analytics", "SQL", "Tableau", "R Programming"],
-    description:
-      "Comprehensive program covering data analytics fundamentals, data cleaning, analysis, and visualization.",
-    image: "/images/certificates/google-analytics.png",
-    verifyUrl: "https://www.credly.com/badges/GOOGLE-DA-2024-001",
-    featured: false,
-  },
-  {
-    title: "FastAPI Web Development",
-    issuer: "Python Institute",
-    date: "2024-07-20",
-    credentialId: "PI-FASTAPI-2024-001",
-    category: "Programming",
-    skills: ["FastAPI", "Python", "API Development", "Backend"],
-    description: "Advanced FastAPI development including authentication, database integration, and API documentation.",
-    image: "/images/certificates/fastapi-development.png",
-    verifyUrl: "https://pythoninstitute.org/verify/PI-FASTAPI-2024-001",
-    featured: false,
-  },
+{
+  "title": "Data Science Tools",
+  "issuer": "IBM",
+  "date": "2025-08-08",
+  "credentialId": "DS0105EN",
+  "category": "Data Science",
+  "skills": ["Data Science Tools", "Jupyter Notebooks", "RStudio", "GitHub", "IBM Data Analytics"],
+  "description":
+    "Successfully completed and received a passing grade in the IBM course on Data Science Tools. The course covered essential data science environments, tools, and platforms including Jupyter, RStudio, and Watson Studio.",
+  "image": "/images/certificates/IBM-Data-Science.jpg",
+  "verifyUrl": "https://courses.yl-ptech.skillsnetwork.site/certificates/84a478cad2e3453c97b09f3084918cf4",
+  "featured": true
+},
+
+{
+  "title": "Data Analytics Job Simulation",
+  "issuer": "Deloitte",
+  "date": "2025-07-24",
+  "credentialId": "wCZhd6UK9mYDcTAGm",
+  "category": "Data Science",
+  "skills": [
+    "Data Analysis",
+    "Forensic Technology",
+    "Problem Solving",
+    "Analytical Thinking"
+  ],
+  "description": "Completed the Deloitte Data Analytics Job Simulation via Forage. Worked on practical tasks including data analysis and forensic technology, simulating real-world job responsibilities in the field of analytics.",
+  "image": "/images/certificates/deloitte-data-analytics.jpg",
+  "verifyUrl":"/images/certificates/deloitte-data-analytics.jpg",
+  "featured": true,
+  "verifyType": "external"
+},
+
+{
+  "title": "Python 101 for Data Science",
+  "issuer": "IBM Cognitive Class",
+  "date": "2025-08-08",
+  "credentialId": "PY0101EN",
+  "category": "Data Science",
+  "skills": ["Python", "Data Science", "Programming Basics", "Data Analysis"],
+  "description": "Successfully completed Python 101 for Data Science, covering Python programming fundamentals and its applications in data science.",
+  "image": "/images/certificates/IBM-PY0101EN.jpg",
+  "verifyUrl": "https://courses.cognitiveclass.ai/certificates/d0a1d001c01a4c548b593c1cb1b56444",
+  "featured": false,
+},
+
+{
+  "title": "Data Science Methodology",
+  "issuer": "IBM",
+  "date": "2025-08-08",
+  "credentialId": "DS0103EN",
+  "category": "Data Science",
+  "skills": ["Data Science", "Methodology", "Problem-Solving", "Data Analysis"],
+  "description": "Successfully completed the Data Science Methodology course, learning about the major steps in the data science methodology including problem definition, data understanding, preparation, modeling, evaluation, and deployment.",
+  "image": "/images/certificates/IBM-DS0101EN.jpg",
+  "verifyUrl": "https://courses.yl-ptech.skillsnetwork.site/certificates/30ce3669a6694b489cbbfc2c76357753",
+  "featured": false
+},
+
+{
+  "title": "Skill Development & Internship (Crop Yield Prediction)",
+  "issuer": "Euphoria GenX",
+  "date": "2024-05-24",
+  "credentialId": "EG_24_1984",
+  "category": "Machine Learning",
+  "skills": ["Python", "Data Preprocessing", "Machine Learning", "Crop Yield Prediction", "Data Analysis"],
+  "description": "Successfully completed the Skill Development and Internship programme at Euphoria GenX (31st March 2024 – 18th May 2024), contributing to the Crop Yield Prediction project.",
+  "image": "/images/certificates/euphoria-genx.jpg",
+  "verifyUrl": "/images/certificates/euphoria-genx.jpg",
+  "featured": false
+},
+{
+  "title": "GenAI Powered Data Analytics Job Simulation",
+  "issuer": "TATA (via Forage)",
+  "date": "2025-07-24",
+  "credentialId": "x5KEmHiCbtgBidNwr",
+  "category": "Data Analytics",
+  "skills": [
+    "Exploratory Data Analysis",
+    "Risk Profiling",
+    "AI for Predictive Analytics",
+    "Business Reporting",
+    "Data Storytelling",
+    "AI-driven Collections Strategy"
+  ],
+  "description": "Completed a virtual job simulation with TATA via Forage, gaining practical experience in exploratory data analysis, risk profiling, predicting delinquency with AI, business reporting, data storytelling, and implementing AI-driven collections strategies.",
+  "image": "/images/certificates/tata-genai-analytics.jpg",
+  "verifyUrl": "/images/certificates/tata-genai-analytics.jpg",
+  "featured": false
+},
+
+{
+  "title": "Project Development Using JAVA for Beginners - 2024",
+  "issuer": "Udemy",
+  "date": "2024-05-10",
+  "credentialId": "UC-2afb53d8-ddb1-40e6-8f23-c03a3eee69cc6",
+  "category": "Programming",
+  "skills": ["Java", "Object-Oriented Programming", "Project Development", "Software Engineering Basics"],
+  "description": "Completed a 45.5-hour Udemy course on Java project development for beginners, covering core Java concepts, object-oriented programming, and building real-world Java projects.",
+  "image": "/images/certificates/udemy-java.jpg",
+  "verifyUrl": "/images/certificates/udemy-java.jpg",
+  "featured": false
+},
+
+{
+  "title": "Effective Business Websites",
+  "issuer": "HP LIFE | HP Foundation",
+  "date": "2024-10-27",
+  "credentialId": "9c5b2b9c-d922-4f56-9a4b-996ae179c15a",
+  "category": "Web Development",
+  "skills": ["Web Development", "Business Website Design", "Customer Behavior Analysis", "Website Metrics"],
+  "description": "Successfully completed the HP LIFE online course on building effective business websites, covering best-practice development techniques, customer behavior analysis, and website metrics evaluation.",
+  "image": "/images/certificates/hp-effective-business-websites.jpg",
+  "verifyUrl": "/images/certificates/hp-effective-business-websites.jpg",
+  "featured": false
+},
+
 ]
 
-const categories = ["All", "Data Science", "Web Development", "Cloud", "Machine Learning", "Programming"]
+const categories = ["All", "Data Science", "Web Development", "Data Analytics", "Machine Learning", "Programming"]
 
 export default function CertificateClientPage() {
   const [selectedCertificate, setSelectedCertificate] = useState<any>(null)
