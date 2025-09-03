@@ -438,7 +438,7 @@ export default function ServicesPage() {
             {/* top badges */}
             <div className="absolute top-3 left-3 flex flex-wrap gap-2">
               <span className="px-2 py-0.5 rounded-md text-xs bg-white/10 border border-white/20 text-slate-200/90">
-                Next.js
+                Analytics
               </span>
             </div>
             {/* overlay */}
@@ -479,7 +479,7 @@ export default function ServicesPage() {
             {/* top badges */}
             <div className="absolute top-3 left-3 flex flex-wrap gap-2">
               <span className="px-2 py-0.5 rounded-md text-xs bg-white/10 border border-white/20 text-slate-200/90">
-                Automation
+                Next.js
               </span>
             </div>
             {/* overlay */}
