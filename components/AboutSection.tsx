@@ -46,15 +46,19 @@ export default function AboutSection() {
               <div className="bg-red-500 text-white text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-full inline-block mb-4 sm:mb-6 font-medium">
                 Quality Drives Code
               </div>
-              <div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl p-4 sm:p-6 flex items-center justify-center">
-                <Image
-                  src="/images/sujan-profile.jpg"
-                  alt="Sujan Das"
-                  width={300}
-                  height={300}
-                  className="rounded-xl max-w-full h-auto"
-                />
-              </div>
+<div className="flex justify-center items-center">
+  <div className="rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+    <Image
+      src="/images/sujan-profile.jpg"
+      alt="Portrait photo of Sujan Das"
+      width={360}
+      height={360}
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
+
             </div>
           </motion.div>
 
