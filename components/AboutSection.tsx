@@ -3,14 +3,14 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Globe, Briefcase, GraduationCap, Sparkles } from "lucide-react"
+import { Mail, Globe, Briefcase, GraduationCap, Sparkles, Badge, Star, User } from "lucide-react"
 
 export default function AboutSection() {
   const infoItems = [
-    { icon: Sparkles, label: "Name", value: "Sujan Das" },
+    { icon: User, label: "Name", value: "Sujan Das" },
     { icon: Mail, label: "Email", value: "contact@sujandas.info", href: "mailto:contact@sujandas.info" },
     { icon: Globe, label: "Based in", value: "India" },
-    { icon: Briefcase, label: "Experience", value: "2+ Years" },
+    { icon: Briefcase, label: "Experience", value: "2+ Years of Freelance Excellence" },
     { icon: GraduationCap, label: "Education", value: "BCA Graduate" },
   ]
 

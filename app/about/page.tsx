@@ -35,7 +35,7 @@ export default function AboutPage() {
     { icon: Sparkles, label: "Name", value: "Sujan Das" },
     { icon: Mail, label: "Email", value: "contact@sujandas.info", href: "mailto:contact@sujandas.info" },
     { icon: Globe, label: "Based in", value: "Kolkata, India" },
-    { icon: Briefcase, label: "Experience", value: "2+ Years" },
+    { icon: Briefcase, label: "Experience", value: "2+ Years of Freelance Excellence" },
     { icon: GraduationCap, label: "Education", value: "BCA Graduate" },
   ]
 
@@ -194,16 +194,19 @@ export default function AboutPage() {
                   <div className="bg-red-500 text-white text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-full inline-block mb-4 sm:mb-6 font-medium">
                     Quality Drives Code
                   </div>
-                  <div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl p-4 sm:p-6 flex items-center justify-center">
-                    <Image
-                      src="/images/sujan-profile.jpg"
-                      alt="Portrait photo of Sujan Das"
-                      width={360}
-                      height={360}
-                      className="rounded-xl max-w-full h-auto"
-                      priority
-                    />
-                  </div>
+ <div className="flex justify-center items-center">
+  <div className="rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+    <Image
+      src="/images/sujan-profile.jpg"
+      alt="Portrait photo of Sujan Das"
+      width={360}
+      height={360}
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
+
 
                   {/* Highlights (replacing numeric stats) */}
                   <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
