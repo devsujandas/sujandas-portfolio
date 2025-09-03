@@ -233,7 +233,7 @@ ${formData.Inquiry || ""}`
               </Button>
         </motion.div>
 
-            <Link href="/projects">
+            <Link href="/project">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
