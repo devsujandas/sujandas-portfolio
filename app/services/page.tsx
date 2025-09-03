@@ -430,8 +430,8 @@ export default function ServicesPage() {
         <article className="glass-card overflow-hidden group rounded-2xl w-full">
           <div className="relative h-full">
             <img
-              src="/images/projects/portfolio-website.png" // image
-              alt="Portfolio Website preview"
+              src="/images/projects/moneytany-service.png" // image
+              alt="Moneytany preview"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
@@ -444,13 +444,13 @@ export default function ServicesPage() {
             {/* overlay */}
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 flex items-end justify-between gap-3">
               <div>
-                <h3 className="font-semibold">Portfolio Website</h3>
+                <h3 className="font-semibold">Moneytany</h3>
               </div>
               <a
-                href="/"
+                href="https://moneytany.sujandas.info/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Open live preview of Portfolio Website in a new tab"
+                aria-label="Open live preview of Moneytany in a new tab"
                 className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-white/5 px-3 py-2 text-white hover:bg-white/10 transition"
               >
                 <ExternalLink className="h-4 w-4 text-red-300" />
@@ -471,8 +471,8 @@ export default function ServicesPage() {
         <article className="glass-card overflow-hidden group rounded-2xl w-full">
           <div className="relative h-full">
             <img
-              src="/images/projects/resume-ai-bot.png" // image
-              alt="Resume AI Bot preview"
+              src="/images/projects/restaurant-website-service.png" // image
+              alt="Restaurant Website preview"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
@@ -485,13 +485,13 @@ export default function ServicesPage() {
             {/* overlay */}
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 flex items-end justify-between gap-3">
               <div>
-                <h3 className="font-semibold">Resume AI Bot</h3>
+                <h3 className="font-semibold">Restaurant Website</h3>
               </div>
               <a
-                href="/project"
+                href="https://restaurant.sujandas.info/about"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Open live preview related to Resume AI Bot in a new tab"
+                aria-label="Open live preview related to Restaurant Website in a new tab"
                 className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-white/5 px-3 py-2 text-white hover:bg-white/10 transition"
               >
                 <ExternalLink className="h-4 w-4 text-red-300" />
