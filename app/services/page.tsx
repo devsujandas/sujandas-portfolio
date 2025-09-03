@@ -430,7 +430,7 @@ export default function ServicesPage() {
         <article className="glass-card overflow-hidden group rounded-2xl w-full">
           <div className="relative h-full">
             <img
-              src="/images/projects/moneytany-service.png" // image
+              src="/images/projects/moneytany-service-ss.jpg" // image
               alt="Moneytany preview"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
@@ -471,7 +471,7 @@ export default function ServicesPage() {
         <article className="glass-card overflow-hidden group rounded-2xl w-full">
           <div className="relative h-full">
             <img
-              src="/images/projects/restaurant-website-service.png" // image
+              src="/images/projects/restaurant-website-service-ss.jpg" // image
               alt="Restaurant Website preview"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
