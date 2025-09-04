@@ -41,6 +41,21 @@ const projects = [
   "featured": true
 },
 {
+  title: "AnlystoX",
+  slug: "anlystox",
+  date: "2025-09-04",
+  tags: ["Stock Market", "Next.js", "Tailwind CSS", "Recharts", "Finance Dashboard","API","Database","Automation"],
+  description:
+    "AnlystoX is a modern stock market dashboard for watchlists, portfolios, and insights — built for speed, clarity, and responsiveness.",
+  image: "/images/projects/anlystox.png",
+  github: "https://github.com/devsujandas/stocks-dashboard",
+  live: "https://anlystox.vercel.app/",
+  stars: "0",
+  forks: "0",
+  status: "Active",
+  featured: true,
+},
+{
   "title": "Ed-Flourish Learning Platform",
   "slug": "ed-flourish",
   "date": "2025-09-02",
