@@ -13,8 +13,8 @@ const projects = [
 {
   title: "Moneytany",
   slug: "moneytany",
-  date: "2025-09-03",
-  tags: ["Data Analysis", "Finance Tracker", "PWA", "Next.js", "Tailwind CSS", ],
+  date: "2025-07-19",
+  tags: ["Data Analysis", "Finance Tracker", "PWA", "Next.js", "Tailwind CSS", "Scripting", "CI/CD", "DevOps" ],
   description:
     "Moneytany is a PWA-ready finance tracker for managing expenses, income, and spending insights.",
   image: "/images/projects/moneytany.png",
@@ -29,8 +29,8 @@ const projects = [
 {
   "title": "Restaurant Website",
   "slug": "restaurant-site",
-  "date": "2025-09-02",
-  "tags": ["Next.js", "Tailwind", "Framer Motion", "TypeScript"],
+  "date": "2024-12-02",
+  "tags": ["Next.js", "Tailwind", "Framer Motion", "TypeScript", "Scripting", "CI/CD", "DevOps"],
   "description": "A dark-themed, mobile-first restaurant website with animations, menu filters, about section, and booking system.",
   "image": "/images/projects/restaurant-website.png",
   "github": "https://github.com/devsujandas/restaurant-website",
@@ -44,7 +44,7 @@ const projects = [
   title: "AnlystoX",
   slug: "anlystox",
   date: "2025-09-04",
-  tags: ["Stock Market", "API", "Recharts", "Next.js", "Tailwind CSS",  "Finance Dashboard","Database","Automation"],
+  tags: ["Stock Market", "API", "Recharts", "Next.js", "Tailwind CSS",  "Finance Dashboard","Database","Automation", "Scripting", "CI/CD", "DevOps"],
   description:
     "AnlystoX is a modern stock market dashboard for watchlists, portfolios, and insights — built for speed, clarity, and responsiveness.",
   image: "/images/projects/anlystox.png",
@@ -58,8 +58,8 @@ const projects = [
 {
   "title": "Ed-Flourish Learning Platform",
   "slug": "ed-flourish",
-  "date": "2025-09-02",
-  "tags": ["Auth", "Next.js", "Tailwind", "Framer Motion", "TypeScript"],
+  "date": "2024-08-12",
+  "tags": ["Auth", "Next.js", "Tailwind", "Framer Motion", "TypeScript", "Scripting", "CI/CD", "DevOps"],
   "description": "An interactive online learning platform with courses, study resources, mock tests, job portal, and AI chatbot.",
   "image": "/images/projects/ed-flourish.png",
   "github": "https://github.com/devsujandas/Ed-flourish",
@@ -73,8 +73,8 @@ const projects = [
 {
   "title": "TuryaSahityangon",
   "slug": "bangla-literature-site",
-  "date": "2025-09-02",
-  "tags": ["Next.js", "PostgreSQL","Database", "Tailwind", "TypeScript", "Framer Motion"],
+  "date": "2024-11-02",
+  "tags": ["Next.js", "PostgreSQL","Database", "Tailwind", "TypeScript", "Framer Motion", "Scripting", "CI/CD", "DevOps"],
   "description": "A digital Bangla literature platform with stories, poems, novels, category filters, and an engaging reading experience.",
   "image": "/images/projects/bangla-literature.png",
   "github": "https://github.com/devsujandas/Turyasahityangon",
@@ -89,7 +89,7 @@ const projects = [
   title: "GlowDock",
   slug: "glowdock",
   date: "2025-01-20",
-  tags: ["Dashboard", "PostgreSQL", "Next.js", "Tailwind CSS", "File Management", "Database"],
+  tags: ["Dashboard", "PostgreSQL", "Next.js", "Tailwind CSS", "File Management", "Database", "Scripting", "CI/CD", "DevOps"],
   description:
     "GlowDock is a secure file management platform for team sharing, analytics, collaboration, and real-time tracking.",
   image: "/images/projects/glowdock.png",
