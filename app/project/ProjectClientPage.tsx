@@ -44,7 +44,7 @@ const projects = [
   title: "AnlystoX",
   slug: "anlystox",
   date: "2025-09-04",
-  tags: ["Stock Market", "API", "Recharts", "Next.js", "Tailwind CSS",  "Finance Dashboard","Database","Automation", "Scripting", "CI/CD", "DevOps"],
+  tags: ["Stock Market", "API", "Recharts","Data Analysis", "Next.js", "Tailwind CSS",  "Finance Dashboard","Database","Automation", "Scripting", "CI/CD", "DevOps"],
   description:
     "AnlystoX is a modern stock market dashboard for watchlists, portfolios, and insights — built for speed, clarity, and responsiveness.",
   image: "/images/projects/anlystox.png",
@@ -68,8 +68,22 @@ const projects = [
   "forks": "7",
   "status": "Completed",
   "featured": true
-}
-,
+},
+{
+  "title": "JIGASHA - Quiz Platform",
+  "slug": "jigasha",
+  "date": "2025-01-20",
+  "tags": ["REST", "API", "Next.js", "Tailwind", "TypeScript", "Quiz Engine"],
+  "description": "A modern quiz platform with diverse categories, difficulty levels, achievements, and progress tracking.",
+  "image": "/images/projects/jigasha.png",
+  "github": "https://github.com/devsujandas/jigasha-QuizApp",
+  "live": "https://jigasha.sujandas.info/",
+  "stars": "12",
+  "forks": "3",
+  "status": "In Progress",
+  "featured": true
+},
+
 {
   "title": "TuryaSahityangon",
   "slug": "bangla-literature-site",
